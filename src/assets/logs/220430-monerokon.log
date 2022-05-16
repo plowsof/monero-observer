@@ -1,0 +1,166 @@
+[2022-04-30 19:00:42] <midipoet> hello all. It's MoneroKon 2022 meeting time. Agenda: https://github.com/monero-project/meta/issues/694
+[2022-04-30 19:00:45] <midipoet> 1. Greetings
+[2022-04-30 19:01:21] <msvb-web> Hello.
+[2022-04-30 19:02:46] <midipoet> tough crowd tonight!
+[2022-04-30 19:02:59] <midipoet> 2. Invoices for community approval (DR)
+[2022-04-30 19:03:28] <midipoet> i can see three invoices on the Kanban that require approval: https://cryptpad.disroot.org/kanban/#/2/kanban/edit/dXRhQNnsd3eLZelrDTAyK-eZ/
+[2022-04-30 19:03:32] <monerokon-tg_> [telegram] <ajs_xmr>Hi
+[2022-04-30 19:04:10] <midipoet> the first is for the venue (night-time hire). i think we are still waiting on an update to this invoice, so when we receive it we can vote for that. 
+[2022-04-30 19:04:45] <midipoet> the second is for Luz e Som
+[2022-04-30 19:04:58] <monerokon-tg_> [xmpp] <ajs>IRC - matrix bridge is down
+[2022-04-30 19:05:06] <midipoet> which is for the 4* 50" tvs
+[2022-04-30 19:05:14] <ajs_[m]> test
+[2022-04-30 19:05:20] <midipoet> test received
+[2022-04-30 19:05:46] <monerokon-tg_> [xmpp] <ajs>One way
+[2022-04-30 19:05:51] <midipoet> ah ok
+[2022-04-30 19:06:28] <midipoet> if i am honest, i am not sure who looks after the bridges for these rooms. maybe pigeons?
+[2022-04-30 19:06:33] <monerokon-tg_> [telegram] <ajs_xmr>Luz invoice is 50% deposit
+[2022-04-30 19:06:58] <monerokon-tg_> [telegram] <ajs_xmr>The other 50% is due when picking up the TVs
+[2022-04-30 19:07:18] <monerokon-tg_> [telegram] <ajs_xmr>No idea
+[2022-04-30 19:08:01] <midipoet> ok. i think we can take a community vote on the Luz e Som invoice for the TVs. 1 = Approve, 2 = Disapprove, 3 = Abstain.
+[2022-04-30 19:08:09] <midipoet> 1
+[2022-04-30 19:08:40] <monerokon-tg_> [xmpp] <ajs>1
+[2022-04-30 19:08:45] <msvb-web> 1.
+[2022-04-30 19:09:12] <midipoet> ok. i think we can move this to "approved" and ask DR to wire funds.
+[2022-04-30 19:09:21] <monerokon-tg_> [telegram] <ajs_xmr>Okay
+[2022-04-30 19:10:05] <midipoet> the final invoice is from Monero Devices to MoneroKon. This is for €9000 which covers pretty much all our swag requirements. 
+[2022-04-30 19:10:13] <msvb-web> This is the invoice for the collection of merchandise to assemble on site into 100 swag bags.
+[2022-04-30 19:10:18] <msvb-web> The merchandise invoice has the standard B2B sales terms (Monero Devices) which requires half up front and half on delivery. If we want that, otherwise if it's a accounting headache then we optionally pay all up front.
+[2022-04-30 19:11:56] <msvb-web> A semirelated question, which email address are others using when a vendor requires one to accept an order? I tried info@monerokon.com which doesn't work.
+[2022-04-30 19:12:19] <midipoet> the swag expenditure was discussed at the sub-meeting on Wednesday and the organising group approved the expenditure. 
+[2022-04-30 19:12:53] <monerokon-tg_> [telegram] <ajs_xmr>I could set up info@momerokon.com
+[2022-04-30 19:13:20] <monerokon-tg_> [telegram] <ajs_xmr>*info@monerokon.com
+[2022-04-30 19:13:27] <midipoet> i think for transparency sake, we should vote again here for the MoneroDevices invoice. so 1 = Approve, 2 = Disapprove, 3 = Abstain. 
+[2022-04-30 19:13:32] <midipoet> 1
+[2022-04-30 19:13:41] <msvb-web> 3.
+[2022-04-30 19:13:45] <monerokon-tg_> [telegram] <ajs_xmr>1
+[2022-04-30 19:14:12] <midipoet> ok great. msvb - i think you should check with DR which payment schedule they prefer
+[2022-04-30 19:14:24] <msvb-web> Good midipoet, I will take care of that.
+[2022-04-30 19:14:26] <msvb-web> ajs_[m]: Let's do it only if we feel troubles of having a public email address will be less than the benefits.
+[2022-04-30 19:14:40] <msvb-web> Set up the email, I mean.
+[2022-04-30 19:14:51] <midipoet> ok. 3. Update on venue requirements q list (G+H)
+[2022-04-30 19:15:20] <midipoet> at the moment, we still have some outstanding items on the V requirements doc (i also have to add a few more recent ones)
+[2022-04-30 19:15:37] <midipoet> doc here: https://cryptpad.disroot.org/pad/#/2/pad/edit/NnjBlAV78oEKScZKVnqMOtox/
+[2022-04-30 19:15:56] <midipoet> does anybody have any comments/questions/concerns on venue related aspects?
+[2022-04-30 19:20:34] <midipoet> ok. i think we can move on. if anybody has any comments or concerns, please add them to the doc above. 
+[2022-04-30 19:20:50] <midipoet> i will also try and clean that doc up during the week (as i know its a bit of a mess). 
+[2022-04-30 19:21:01] <midipoet> 4. CfP status (ajs)
+[2022-04-30 19:21:45] <monerokon-tg_> [telegram] <ajs_xmr>Soft deadline set for 1 May 13:00 UTC
+[2022-04-30 19:22:48] <monerokon-tg_> [telegram] <ajs_xmr>We've received 21 proposals
+[2022-04-30 19:23:38] <monerokon-tg_> [telegram] <ajs_xmr>(Of which 1 not sure about, 2 from msvb)
+[2022-04-30 19:23:48] <midipoet> ok. that is quite positive. 
+[2022-04-30 19:23:54] <msvb-web> There is at least one or two proposals ;) that benefit from extended time, like one hour or even two hours. They are interactive workshops which should be carried out for students sitting at tables with electricity.
+[2022-04-30 19:24:23] <msvb-web> We can force these workshops (if they are accepted) to the podium speech format, which would be too bad.
+[2022-04-30 19:24:45] <msvb-web> Or we can try to put them indoors at tables, but that may not work if the indoor table area will be given to sponsors.
+[2022-04-30 19:24:51] <msvb-web> Any opinions about this?
+[2022-04-30 19:25:04] <monerokon-tg_> [telegram] <ajs_xmr>We should approve or reject the proposals ASAP so people can have enough time to make travel plans
+[2022-04-30 19:25:56] <monerokon-tg_> [telegram] <ajs_xmr>Most of the proposals are for talks
+[2022-04-30 19:27:50] <midipoet> i think we should push the committee to decide within 48 hours after the soft deadline (if possible)
+[2022-04-30 19:28:07] <monerokon-tg_> [telegram] <ajs_xmr>Agree
+[2022-04-30 19:28:15] <midipoet> perhaps with the meeting on Wednesday to discuss any proposals there is not consensus on?
+[2022-04-30 19:28:40] <monerokon-tg_> [telegram] <ajs_xmr>Good idea
+[2022-04-30 19:29:30] <monerokon-tg_> [telegram] <ajs_xmr>I will make new voting link after deadline and share with committee
+[2022-04-30 19:30:19] <monerokon-tg_> [telegram] <ajs_xmr>Set deadline for votes Wednesday
+[2022-04-30 19:30:21] <midipoet> ok sounds good
+[2022-04-30 19:30:30] <midipoet> 5. Update on sponsor interest (all)
+[2022-04-30 19:32:08] <monerokon-tg_> [telegram] <ajs_xmr>We got a few confirmed
+[2022-04-30 19:32:23] <msvb-web> Is Majestic Bank one of the ajs_[m]?
+[2022-04-30 19:33:04] <monerokon-tg_> [telegram] <ajs_xmr>They expressed interest, but still waiting on confirmation
+[2022-04-30 19:34:03] <msvb-web> I'm quite excited about Majestic being there, whichever level they choose.
+[2022-04-30 19:34:29] <monerokon-tg_> [telegram] <ajs_xmr>Tier 1 - RINO, Cake Wallet
+[2022-04-30 19:35:35] <monerokon-tg_> [telegram] <ajs_xmr>Tier 2 - IVPN, Sweetwater Digital Asset Consulting
+[2022-04-30 19:36:34] <monerokon-tg_> [telegram] <ajs_xmr>Tier 3 - Flexiana/Cicada Pay
+[2022-04-30 19:36:53] <monerokon-tg_> [telegram] <ajs_xmr>DR needs to issue them invoices
+[2022-04-30 19:38:27] <midipoet> that is good to hear. thanks to the sponsors, as they are giving their support to the event, and more specifically helping fund the speaker and volunteer expenses which is very much welcome.
+[2022-04-30 19:38:45] <midipoet> 6. Inside banners and swag items (G+H/msvb)
+[2022-04-30 19:39:06] <midipoet> the banner are still an open question with G+H, and the swag we have discussed (thanks msvb)
+[2022-04-30 19:39:34] <monerokon-tg_> [xmpp] <ajs>We will need to print some banners with company logo of sponsors
+[2022-04-30 19:40:02] <monerokon-tg_> [xmpp] <ajs>Some of those virtual banners
+[2022-04-30 19:40:03] <midipoet> yes. we also need to understand from the sponsors if they want swag items, what type of exposure on the banners, or if they want to put items into the swag bags themselves
+[2022-04-30 19:40:31] <midipoet> so as we are issuing invoices, perhaps we can open those discussions?
+[2022-04-30 19:41:02] <midipoet> also, i guess msvb, they might want their logo on the t-shirt/linen bag?
+[2022-04-30 19:41:17] <monerokon-tg_> [xmpp] <ajs>No
+[2022-04-30 19:41:20] <midipoet> is there a deadline for including sponsors on these items (for example?)
+[2022-04-30 19:41:34] <monerokon-tg_> [xmpp] <ajs>The deal is just to have logo on banners
+[2022-04-30 19:41:43] <midipoet> ajs: ah ok
+[2022-04-30 19:41:52] <midipoet> tough gig!
+[2022-04-30 19:42:28] <monerokon-tg_> [xmpp] <ajs>Getting logos on merch is a logistical headache
+[2022-04-30 19:42:47] <midipoet> ok. sounds fair
+[2022-04-30 19:43:12] <midipoet> 7. Local warehouse/shipping address (msvb/all)
+[2022-04-30 19:43:26] <midipoet> i saw some discussion on this
+[2022-04-30 19:43:45] <midipoet> i have asked G+H if they can source a service provider for this
+[2022-04-30 19:43:50] <midipoet> and they said they would try
+[2022-04-30 19:44:05] <midipoet> but someone mentioned Mailboxes (is that a pan-European company?)
+[2022-04-30 19:44:36] <monerokon-tg_> [xmpp] <ajs>I asked ProxyStore people help locate a contact in Lisbon
+[2022-04-30 19:45:34] <monerokon-tg_> [xmpp] <ajs>https://proxysto.re/en/index.html
+[2022-04-30 19:46:08] <msvb-web> Sorry, half crashed computer. Catching up. midipoet Yes we will have logos on maybe some things, depending on production deadlines and what artwork is available with clear instructions at that time.
+[2022-04-30 19:46:23] <monerokon-tg_> [xmpp] <ajs>they have a physical location in Leipzig
+[2022-04-30 19:47:38] <midipoet> i am bit confused. don't we need a delivery and warehouse in Lisbon?
+[2022-04-30 19:48:01] <monerokon-tg_> [xmpp] <ajs>Yeah, I asked them to locate someone is Lisbon
+[2022-04-30 19:48:11] <monerokon-tg_> [xmpp] <ajs>*in
+[2022-04-30 19:48:32] <monerokon-tg_> [xmpp] <ajs>That could help with logistics
+[2022-04-30 19:48:55] <midipoet> ah ok
+[2022-04-30 19:49:05] <midipoet> ok - let's see what comes of that for next week then
+[2022-04-30 19:49:07] <monerokon-tg_> [xmpp] <ajs>They said the someone that knows someone in Lisbon
+[2022-04-30 19:49:23] <midipoet> 8. Food-truck (all)
+[2022-04-30 19:50:01] <msvb-web> midipoet: There is no published deadline for anything relating to merchandise and there is no guarantee that a desired brand (aside from Monero) will occur. It's a best effort arrangement to avoid partial swag failure (normal lead time 3 months.)
+[2022-04-30 19:50:32] <msvb-web> There is a new section in the pad where sponsor information should go, and as we order the hundred or so subcontract services that area will be observed and integrated.
+[2022-04-30 19:50:38] <midipoet> msvb-web: ok - sounds good. As ajs mentioned, we are under no sponsor obligation to include their logos on merch
+[2022-04-30 19:51:01] <midipoet> re the food trucks, we still don't really have a plan for the second food van. at the moment we have venue provided Pizza, and the potential for a VeganJunkies food van for the weekend
+[2022-04-30 19:51:13] <midipoet> there is the option of a mexican style van
+[2022-04-30 19:51:26] <midipoet> but perhaps we should look for something else as well?
+[2022-04-30 19:51:45] <midipoet> (as another option)?
+[2022-04-30 19:53:45] <msvb-web> It's quite depressing that we have two options to choose from for food, but if that's really all that's available in Lisboa then we'll adapt.
+[2022-04-30 19:53:59] <midipoet> msvb-web: i am sure there are other options
+[2022-04-30 19:54:35] <msvb-web> Tapas, greek, turkish, asian, those are choices I want to see. Monerotopia had a burgers and french fries sandwich truck which was very nice.
+[2022-04-30 19:54:37] <midipoet> but it would be good to get local knowledge on what is good/what is not
+[2022-04-30 19:54:55] <msvb-web> Maybe kic0 knows about food.
+[2022-04-30 19:55:05] <midipoet> kico: ping!
+[2022-04-30 19:55:16] <midipoet> or anybody else that knows Lisbon food trucks
+[2022-04-30 19:55:30] <midipoet> 9. Night-time programming (all)
+[2022-04-30 19:55:42] <midipoet> (we are still waiting on itemised invoice and confirmation of acts)
+[2022-04-30 19:55:53] <midipoet> so we can discuss as we hear more
+[2022-04-30 19:56:01] <midipoet> 10. Venue mural [inside] (all)
+[2022-04-30 19:56:16] <midipoet> i have messaged an artist on instagram directly (still no response)
+[2022-04-30 19:56:33] <midipoet> i think we may have to try and different artists if i do not hear by Wed
+[2022-04-30 19:56:46] <midipoet> *try a different artist
+[2022-04-30 19:57:22] <midipoet> 11. AOB (any other business?)
+[2022-04-30 19:57:47] <msvb-web> The speaker dinner, as suggested by Francisco.
+[2022-04-30 19:58:46] <midipoet> msvb-web: yes. good point. we have this on the kanban, and i think have to get a few more options. i have asked G+H to look also
+[2022-04-30 19:58:58] <midipoet> once we have a few options, we can see about availability
+[2022-04-30 20:00:04] <monerokon-tg_> [xmpp] <ajs>Accommodations
+[2022-04-30 20:00:32] <monerokon-tg_> [xmpp] <ajs>msvb and I found some apartments close to venue
+[2022-04-30 20:00:42] <msvb-web> I found a good house to rent, and ajs found an even better option. I think these two houses (full of separated apartments with keys) are both 14 minutes walking distance.
+[2022-04-30 20:01:00] <msvb-web> It's likely there is no other house in the area to rent, so we must choose one or the other.
+[2022-04-30 20:01:45] <midipoet> i choose the better ones
+[2022-04-30 20:01:54] <midipoet> (these are for volunteers?)
+[2022-04-30 20:02:04] <msvb-web> You are the jerk midipoet who will not join us in the common house, so you get no voet.
+[2022-04-30 20:02:10] <midipoet> LOL
+[2022-04-30 20:02:18] <midipoet> can i come and have a beer?
+[2022-04-30 20:02:32] <msvb-web> My higher price option only fits 5-8, so there would be no room for volunteers.
+[2022-04-30 20:02:59] <midipoet> msvb-web:are we not volunteers?
+[2022-04-30 20:03:43] <msvb-web> Volunteers include the person standing by the back door for four hours who just wants a free ticket.
+[2022-04-30 20:03:44] <monerokon-tg_> [xmpp] <ajs>The one I found has (2) 2-bedroom flats, and a studio flat
+[2022-04-30 20:03:54] <msvb-web> We are something else, planners, staffpeople, whatever the name.
+[2022-04-30 20:04:30] <msvb-web> If you midipoet think we should restrict the house to the handful of us staff that would be a good decision probably. Anybody else think about this?
+[2022-04-30 20:04:52] <midipoet> well, i think you should book accommodation for the core organising team, but maybe we can confirm on Wed?
+[2022-04-30 20:05:18] <msvb-web> But ajs_[m], I think your option is a house of about six individual apartments isn't it larer than the 3 flats you mention? Maybe I'm wrong.
+[2022-04-30 20:05:28] <monerokon-tg_> [xmpp] <ajs>I could book the places and pay later
+[2022-04-30 20:05:38] <monerokon-tg_> [xmpp] <ajs>But it is cheaper to pay now
+[2022-04-30 20:05:55] <msvb-web> We need the flexibility I think, probably better to pay later.
+[2022-04-30 20:06:14] <monerokon-tg_> [telegram] <franciscom0301>Hello guys, arrived home right now, I have been following the text from time to time and I'm happy to have those sponsors
+[2022-04-30 20:06:20] <midipoet> msvb-web: yeah, i agree. we can take the hit on the difference (assuming the difference is not extravagent)
+[2022-04-30 20:06:27] <msvb-web> What dates do we want, because we need at least one person/apartment for the full day after Sunday (to visit open businesses on Monday.)
+[2022-04-30 20:06:32] <monerokon-tg_> [xmpp] <ajs>msvb: is a multi-apartment residence
+[2022-04-30 20:06:42] <midipoet> 15-21
+[2022-04-30 20:06:48] <midipoet> i would imagine
+[2022-04-30 20:07:00] <midipoet> or maybe 16-20 (but that is cutting it fine)
+[2022-04-30 20:07:05] <msvb-web> Yes, I agree 15-21. It's a lot of days, but the safest thing.
+[2022-04-30 20:07:29] <msvb-web> Maybe we reserve the first and last day just a single large apartment? What do you think ajs?
+[2022-04-30 20:08:04] <monerokon-tg_> [xmpp] <ajs>Sure, we can do that
+[2022-04-30 20:08:45] <midipoet> ok. good.
+[2022-04-30 20:09:04] <midipoet> anything else we need to discuss?
+[2022-04-30 20:10:37] <midipoet> 12. Confirm next meeting time and date
+[2022-04-30 20:10:59] <midipoet> same time next week (with sub-meeting on Wednesday as usual)
+[2022-04-30 20:11:08] <midipoet> thanks all!
+[2022-04-30 20:11:41] <msvb-web> Good meeting and great moderation, dankon.

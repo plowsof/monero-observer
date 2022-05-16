@@ -1,0 +1,92 @@
+17:00:13 <ErCiccione> Hey folks, it's meeting time! The agenda is here: https://github.com/monero-project/meta/issues/700
+17:00:23 <ErCiccione> This is another meeting dedicated to the upcoming network upgrade. The logs of the last meeting are here: https://github.com/monero-project/meta/issues/684#issuecomment-1100806784
+17:00:30 <ErCiccione> but before we start, quick round of greetings to see who is here
+17:00:33 <ErCiccione> Hi everyone!
+17:00:48 <UkoeHB> hi
+17:01:03 <rbrunner> Hello
+17:01:12 <selsta> hi
+17:01:12 <jberman[m]> hello
+17:02:49 <ErCiccione> not crowded today. Let's wait a couple minutes more
+17:03:48 <selsta> should still be fine for a small status update
+17:04:04 <ooo123ooo123[m]> or not fine
+17:04:13 <ErCiccione> alright, let's go on. Hopefully people will join along the way
+17:04:14 <ErCiccione> so
+17:04:22 <ErCiccione> The detailed plan for the network upgrade is here: https://github.com/monero-project/meta/issues/630
+17:04:35 <ErCiccione> As far as i can tell, almost all the PRs we wanted in are already merged, except for multisig: https://github.com/monero-project/monero/pull/8149
+17:04:46 <ErCiccione> There are other PRs related to multisig. An overview is here: https://github.com/monero-project/monero/issues/8237
+17:04:58 <ErCiccione> 8149 needs to be squashed and then a final review, am i correct?
+17:06:40 <selsta> .merges
+17:06:40 -xmr-pr- 8046 8220 8226 8235 8262 8277 8278 8279
+17:06:51 <selsta> just so that we can see what is already in the merge queue
+17:07:18 <selsta> UkoeHB: kayabaNerve approved 8149, is there anything else to do for it?
+17:07:36 <UkoeHB> hopefully vtnerd can take a look
+17:07:45 <UkoeHB> since there were additions
+17:08:33 <sech1> hello
+17:08:56 <ErCiccione> ok, so we need a last review for vtnerd and then squash and merge.
+17:09:08 <ooo123ooo123[m]> and exploit
+17:09:58 <UkoeHB> exploit?
+17:10:10 <ErCiccione> UkoeHB: please ignore, probably a troll 
+17:10:15 <hyc> hi, sorry wasn't watching the clock
+17:10:56 <ErCiccione> so, is multisig the only thing left? We need to have everything ready by may 16th
+17:11:21 <selsta> why may 16th?
+17:11:35 <UkoeHB> there is also 8220, I think that is waiting for merge
+17:11:39 <hyc> I should have gitian arm macosx ready to merge before then
+17:11:42 <UkoeHB> oh it's in queue
+17:11:48 <selsta> Branch/feature complete ok
+17:11:50 <sech1> May 16th was decided on the previus meeting
+17:11:54 <sech1> or the one before that
+17:12:04 <ErCiccione> selsta: yep, eature/branch complete by may 16th we said
+17:12:17 <ErCiccione> https://github.com/monero-project/meta/issues/630
+17:12:48 <rbrunner> I hope to have my "nice to have" ready by then, I am in the home stretch with jberman reviewing: https://github.com/monero-project/monero/pull/8076
+17:13:03 <jberman[m]> doin my best on reviewing 8076 so we can get that in too, and hopefully 7760 but I doubt it on that one
+17:13:32 <ErCiccione> was about to ask you, that would be a good pr to have for the hard fork rbrunner
+17:13:44 <rbrunner> I am hopeful :)
+17:14:11 <ErCiccione> What about the multisig good to have UkoeHB? https://github.com/monero-project/monero/issues/8237
+17:14:23 <ErCiccione> some of those look mostly ready
+17:14:46 <UkoeHB> 8220 is in merge queue, the other ones need more work and review (won't be ready by the 16th)
+17:15:13 <UkoeHB> the other ones aren't security-related
+17:15:48 <selsta> we can still merge things after may 16th, it's just when we try to branch
+17:16:12 <selsta> this "feature complete" date was never really strict
+17:16:43 <ErCiccione> i thought the point was to have everything ready as soon as possible, so there was one month of testing between may 16th and release date (june 16th)
+17:17:07 <ErCiccione> the testnet hard fork is also set for may 16th
+17:17:19 <garth> ErCiccione: question about your suggestion for the readme and multisig fixes: are the multi sig fixes a consensus breaking change?
+17:17:36 <UkoeHB> they are not
+17:17:51 <garth> Well then I don’t think they should be in the network upgrade history 
+17:17:55 <ErCiccione> nope, just a major fix
+17:18:33 <ErCiccione> i thought we listed major changes in the readme, if that's not the case, sure better not add it
+17:18:58 <rbrunner> Well, as far as multisig is concerned, it's something like a break, with "before" and "after" ...
+17:19:20 <rbrunner> Just not strictly consensu
+17:19:25 <rbrunner> *consensus
+17:19:27 <garth> The list is already pretty long. But if people want non-consensus breaking upgrades listed in the network upgrade history that’s fine with me
+17:20:02 <ErCiccione> Let's continue that conversation in the issue garth
+17:20:15 <garth> It’s already ringsize 16, bulletproofs+, view tags, and fee adjustment
+17:20:19 <garth> Ok cool
+17:20:45 <ErCiccione> now, anybody with updates or questions, before we decide the date of the stagenet fork, as requested?
+17:21:03 <selsta> stagenet fork is usually 1 week before mainnet
+17:22:03 <ErCiccione> so July 9th
+17:22:29 <ErCiccione> Then the definitive plan is:
+17:22:44 <ErCiccione>     Branch/feature complete: May 16th, 2022... (full message at https://libera.ems.host/_matrix/media/r0/download/libera.chat/5f4f229116df660a7b9a81710152f0f139879cce)
+17:23:01 <ErCiccione> should we set a block height for the testnet fork?
+17:23:47 <hyc> the date is getting close, seems like we should
+17:24:11 <ErCiccione> yeah
+17:25:47 <rbrunner> We could leave that to the kind person doing the PR for that, calculating something for May 16
+17:26:13 <ErCiccione> we should really come up with something today IMO, or it gets too late
+17:26:24 <hyc> who will do the PR?
+17:27:22 <ErCiccione> that's why i wouldn't wait 😛
+17:27:38 <jberman[m]> I'll do it
+17:28:39 <ErCiccione> Cool. Thanks. do you already have a height in mind jberman?
+17:30:53 <jberman[m]> 15: 1982800
+17:30:54 <jberman[m]> 16: 1983520 (1 day later)
+17:31:25 <ErCiccione> In any case, if we don't set a date today we should do it as soon as possible 🙂
+17:31:39 <ErCiccione> oh, perfect
+17:32:43 <ErCiccione> So, to update the plan:
+17:33:12 <ErCiccione> Branch/feature complete: May 16th, 2022... (full message at https://libera.ems.host/_matrix/media/r0/download/libera.chat/1551f0ce9ba32f53f5a8f455ac0a7133e7869dbe)
+17:34:35 <ErCiccione> Any comments or something related to the network upgrade that you would like to discuss? Otherwise we can conclude the meeting
+17:39:14 <UkoeHB> thanks ErCiccione 
+17:39:31 <ErCiccione> Alright then, thank you all for coming 🙂
+17:39:40 <ErCiccione> meeting adjourned!
+17:40:34 <ErCiccione> we can set another one for next week if we want? Maybe another for quick updates?
+17:40:56 <ErCiccione> we can also decide later on, but important dates are approaching
+17:43:04 <selsta> next saturday again?
+17:43:43 <jberman[m]> works for me
+17:44:20 <ErCiccione> would be ok for me

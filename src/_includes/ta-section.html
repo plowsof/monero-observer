@@ -1,0 +1,11 @@
+{% assign ta_stories = site.posts | where: "tags", "analysis" %}
+{% for post in ta_stories limit: 1 %}
+<div id="ta">
+<h1>Weekly TA Reports {% assign ta_issues = site.posts | where: "tags", "blitz" %}
+<sup><a href="/tag/analysis">[{{ ta_issues.size }}]</a></sup>
+</h1>
+<a href="{{ post.url }}">
+<img src="/assets/img/stories/{{ post.image }}" id="graphic" alt="banner"/>
+</a>
+</div>
+{% endfor %}

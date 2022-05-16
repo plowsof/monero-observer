@@ -1,0 +1,20 @@
+title: Monero Observer
+description: Everything that moves in the Monero community.
+url: https://monero.observer
+permalink: /:title/
+exclude: ["_drafts", ".jekyll-cache", "Gemfile", "Gemfile.lock"]
+include: ["_headers", "_redirects"]
+pagination:
+  enabled: true
+  per_page: 15
+  limit: 0
+  permalink: '/:num/'
+  sort_field: 'date'
+  sort_reverse: true
+  title: ':title - Page :num'
+  trail: 
+    before: 2
+    after: 2
+sass:
+  sourcemap: never
+image: /assets/img/monero-banner.png

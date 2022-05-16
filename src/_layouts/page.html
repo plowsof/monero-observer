@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en-US">
+{% include head.html %}
+<body>
+{% include header.html %}
+<div class="post-content">
+<article {% if page.url == "/about/" %}id="about"{% endif %}>
+{% if page.url contains '/tag/' %}
+{{ content | markdownify }}
+{% else %}
+<span>
+{% if page.last_modified_at %}
+Updated {{ page.last_modified_at | date: "%-d %b %Y" }}
+{% else %}
+{{ page.date | date: "%-d %b %Y" }}
+{% endif %}
+</span>
+<h1>{{ page.title }}</h1>
+{{ page.content | markdownify }}
+{% if page.url == "/resources/" %}
+{% include resources.html %}
+{% endif %}
+{% if page.url == "/archive/" %}
+{% include archive.html %}
+{% endif %}
+{% if page.url == "/stats/" %}
+{% include statistics-history.html %}
+{% endif %}
+{% endif %}
+</article>
+</div>
+{% include footer.html %}
+</body>
+</html>

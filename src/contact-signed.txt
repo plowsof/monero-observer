@@ -1,0 +1,27 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+XMPP: escapethe3ra@jabber.calyxinstitute.org
+Email: escapethe3ra@dnmx.org
+Key Fingerprint: BCE1 5F74 D181 1282 4899  608A FD10 3120 DC7B CC36
+Github, Gitlab, Reddit: escapethe3ra
+Matrix: escapethe3ra@matrix.org
+XMR: 867TAc58FK2ScH6Kyz9VSJZYSKGbyGfRiJB7M7yV2qEdamdQsxJafEbXxp6QoAkVCjjarKTbsmsZuEm1XymGmSquRdZnN2C
+-----BEGIN PGP SIGNATURE-----
+
+iQKTBAEBCgB9FiEEvOFfdNGBEoJImWCK/RAxINx7zDYFAmJoh0pfFIAAAAAALgAo
+aXNzdWVyLWZwckBub3RhdGlvbnMub3BlbnBncC5maWZ0aGhvcnNlbWFuLm5ldEJD
+RTE1Rjc0RDE4MTEyODI0ODk5NjA4QUZEMTAzMTIwREM3QkNDMzYACgkQ/RAxINx7
+zDYfTg//RMtrvJMF+2ibK/vxU34Sm+03Iz3IajwtN7df54xkC6KkSMLcAqoSiuq0
+ksyX2O3qvUfybnZjluyv5WtMHDHVfomV17T+3TMUWmfeOdtrMliI1O2xJFivVRCr
+lhiOZenEDR95sE51wBRCXREfe2Xmb1KdjpZfuM/8s07a8Qhlm8SIq5xVF5ikvd25
+meXDE+L3hkPHzJlimC0x/EFqaS6hNbBgz0vlbdZsHg6Vi4ofrtxY1lz44Km9Jovu
+aQmcFQ9AzMT0FNssd0wYrtOAqzeBTxk6JuUcnLwuzQipORRcPxkrgo7Xu1xyRqAb
+o4/DLmLZNdkwpVaGgM8QoR7M897RMSuoFQc1Jj+conOLJSEmDm42mOGJDWpy8SUt
+Clyy0aeXDhbRsAbYmZgJBsbkmNfz8otyrTtVVVKiXPrdXFGG6oZ1b4uCxItAYsrA
+v1/0r4+xGynMALFdLVNw3g7j203VzCPW/sfQsgNTHGA6egFmY9ov6qwbKLS1pLpW
+l4ELZJ3twVnOTaQwcQhAVMiEzJltc5ycGDUyQD76L107fdAj9FqYjcCuIX+MPJM7
+lGq2nZvXhZbVBA/vS5O2+efEVRC7Em/+ZPnlOXNDVFT7avIT/KxI74m612OOGbOb
+c1//ZcXvF//QCNuhyDqFPj8QFYmGhrLgpOeSYTzeBj/G8FsPh+g=
+=tXul
+-----END PGP SIGNATURE-----

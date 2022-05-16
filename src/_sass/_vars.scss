@@ -1,0 +1,61 @@
+$background: #111;
+$text: whitesmoke;
+$link: orangered;
+$break-sm: 800px;
+$break-lg: 1200px;
+$break-xl: 1600px;
+:root {
+    --color-scheme-background: whitesmoke;
+    --color-scheme-text-color: #111;
+}
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-scheme-background: whitesmoke;
+        --color-scheme-text-color: #111;
+    }
+    #about code.language-plaintext.highlighter-rouge {
+    	background: #d9dde0 !important;
+    	color: #111 !important;
+    }
+    .post-content article .language-plaintext.highlighter-rouge {
+    	color: whitesmoke !important;
+    }
+    .stats {
+    	color: #2d3748 !important;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-scheme-background: #111;
+        --color-scheme-text-color: white;
+    }
+}
+$font: 'JetBrains Mono', monospace, sans-serif;
+$font-bold: 'JetBrains Mono Bold', monospace, sans-serif;
+@font-face{
+    font-family: 'JetBrains Mono';
+    src: url('/assets/fonts/JetBrainsMono-ExtraLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    --webkit-font-feature-settings: "liga" on, "calt" on;
+    --webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+@font-face{
+    font-family: 'JetBrains Mono Bold';
+    src: url('/assets/fonts/JetBrainsMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+body ::-webkit-scrollbar-thumb, html ::-webkit-scrollbar-thumb {
+  background: slategrey;
+}
+body ::-webkit-scrollbar, html ::-webkit-scrollbar {
+  width: 8px;
+}
+body ::selection, html ::selection {
+  background: orangered 0;
+  color: #111;
+}

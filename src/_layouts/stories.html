@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-US">
+{% include head.html %}
+<body>
+{% include header.html %}
+<div class="content">
+<section id="stories">
+<h1>All Stories <sup>{% assign total_stories = site.posts | where: "category", "story" %}[{{ total_stories.size }}]</sup></h1>
+{% assign all_stories = paginator.posts | where: "category", "story" %}
+{% for post in all_stories %}
+{% if post.category == 'story' %}
+<div class="story">
+<span>{% if post.last_modified_at %}
+{{ post.date | date: "%-d %b %Y" }} | Updated {{ post.last_modified_at | date: "%-d %b %Y" }}
+{% unless post.tags.size == 0 %}
+<a href="/tag/{{ post.tags[0] }}" class="tag">[{{ post.tags[0] }}]</a> 
+{% endunless %}
+{% else %}
+{{ post.date | date: "%-d %b %Y" }}
+{% unless post.tags.size == 0 %}
+<a href="/tag/{{ post.tags[0] }}" class="tag">[{{ post.tags[0] }}]</a> 
+{% endunless %}
+{% endif %}</span>
+<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+</div>
+{% endif %}
+{% endfor %}
+{% if paginator.page_trail %}
+<ul class="pagination">
+  {% for trail in paginator.page_trail %}
+    <li {% if page.url == trail.path %}class="selected"{% endif %}>
+  		{% if page.url == trail.path %}
+  		{{page.pagination_info.curr_page}}
+  		{% else %}
+      <a href="{{ trail.path | prepend: site.baseurl | replace: 'index.html', '' }}" title="{{ trail.title }}">{{ trail.num }}</a>
+  		{% endif %}
+    </li>
+  {% endfor %}
+  <li>[{{ page.pagination_info.total_pages }}]</li>
+</ul>
+{% endif %}
+</section>
+</div>
+{% include footer.html %}
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% assign calendar_events = site.posts | where: "meeting_logs", '' | sort: "meeting_date" %}
+{% assign next_calendar_event = calendar_events[0] %}
+<div id="calendar">
+<h1>Next Calendar Event {% assign total_events = site.posts | where: "tags", "calendar" %}
+<sup><a href="/tag/calendar">[{{ total_events.size }}]</a></sup>
+</h1>
+{% if calendar_events.size == 0 %}
+<p>No upcoming community meetings.</p>
+{% else %}
+{% for post in calendar_events limit: 1 %}
+<div class="{% if post.meeting_logs != '' %}meeting{% else %}pinned-meeting{% endif%} event">
+<p>
+{% if post.meeting_logs != '' %}<a href="{{ post.meeting_logs }}" title="Logs" target="_blank"}>[LOGS]</a>{% endif %}
+</p>
+<p>
+{{ post.meeting_name }}
+</p>
+<span>
+{% if post.meeting_irc %}<a href="{{ post.meeting_irc }}" title="IRC" target="_blank"}>[I]</a>{% endif %}
+{% if post.meeting_matrix %}<a href="{{ post.meeting_matrix }}" title="Matrix" target="_blank"}>[M]</a>{% endif %}
+</span>
+<span>{{ post.meeting_start }}</span>
+<p>
+<a href="{{ post.url }}" class="event-link">{{ post.meeting_date }}</a>
+</p>
+</div>
+{% endfor %}
+{% endif %}
+</div>

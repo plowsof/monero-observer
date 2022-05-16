@@ -1,0 +1,127 @@
+17:00:10 <ErCiccione> Hey folks,it's meeting time. The agenda is here: https://github.com/monero-project/meta/issues/703
+17:00:42 <ErCiccione> This should be a quick meeting for updates, so let's get to it. But first, a round of greetings to see who is here
+17:00:43 <ErCiccione> hi all
+17:01:03 <hyc> hi
+17:01:05 <rbrunner> Hello
+17:01:28 <jberman[m]> hello
+17:01:30 <chesterfield[m]> hi
+17:01:45 <moneromooo> hi
+17:02:34 <ErCiccione> Posting the updated plan from last meeting's logs, so we all have it:
+17:02:44 <ErCiccione> Branch/feature complete: May 16th, 2022... (full message at https://libera.ems.host/_matrix/media/r0/download/libera.chat/1551f0ce9ba32f53f5a8f455ac0a7133e7869dbe)
+17:02:56 <UkoeHB> hi
+17:03:22 <ErCiccione> Thank you all for coming
+17:03:46 <moneromooo> You release before testnet ?
+17:04:00 <moneromooo> Oh nvm, the list isn't ordered. Ignore me.
+17:04:53 <ErCiccione> Branch/feature complete: May 16th, 2022... (full message at https://libera.ems.host/_matrix/media/r0/download/libera.chat/b56b9dfae93fe69e46c9dc876f7f2ad8ab61bb6f)
+17:04:56 <gingeropolous> hi
+17:04:58 <ErCiccione> ^ ordered to avoid confusion
+17:05:32 <ErCiccione> So, master is expected to be feature complete by Monday. What's the current status?
+17:05:45 <hyc> .merges
+17:05:45 -xmr-pr- 8046 8312
+17:06:07 <hyc> seems like we're close to quiescent\
+17:06:15 <UkoeHB> 8149 does not really have enough review
+17:08:02 <ErCiccione> What type of review are we talking about UkoeHB? I thought KayabaNerve's crypto review was the only big review missing.
+17:08:10 <UkoeHB> Like, it's pretty much just me and a some from vtnerd (the original author flaked, and there have been some changes, rebases, cleanup since his original work).
+17:08:41 <UkoeHB> ErCiccione: comprehensive review of the core issues
+17:09:17 <ErCiccione> right, so it's very unlikely that will be reviewed by monday
+17:09:58 <ErCiccione> we should move up branching then, not ideal, but that fix cannot really be postponed
+17:10:14 <ErCiccione> and the testnet hard fork as well
+17:10:26 <gingeropolous> the multisig fix?
+17:10:58 <ErCiccione> yes: https://github.com/monero-project/monero/pull/8149
+17:11:11 <rbrunner> Who are the possible candidates for that final review then?
+17:11:12 <ErCiccione> unless we find somebody before then. Can we?
+17:11:19 <moneromooo> The multisig patch does not require a fork, technically. So it can be released in a subsequent version whenever someone with a clue has reviewed it.
+17:12:23 <ErCiccione> yeah but the hard fork would enforce it to everybody, which especially in this case would be important
+17:13:18 <UkoeHB> technically the correct play would be disabling multisig until it can be reviewed properly
+17:13:33 <jberman[m]> seems a 3rd party audit is the ideal route to me at this point
+17:13:37 <gingeropolous> in wallets?
+17:14:07 <hyc> 3rd party audit is unlikely to be doable within a single month
+17:14:24 <hyc> that kind of excludes multisig from the rest of the timetable
+17:14:25 <gingeropolous> afaiu, can't really disable at the network / protocol level
+17:14:43 <ErCiccione> disabling multisig sounds quite extreme. We don't know who uses it, beside being a huge problem for haveno and rino
+17:15:10 <UkoeHB> it's just disabling something that can't be used anyway (until/if something that works can be merged)
+17:15:45 <rbrunner> Well, it does work, but it has exploitable weaknesses, which are still 2 different things IMHO
+17:15:59 <UkoeHB> if disabled, then the exploits can't be used
+17:16:27 <moneromooo> One could add a "Multisig is currently dangerous if condition1 condition2 etc". Use "please !*" to confirm. And add a please command that redirects its params to the worker func, bypassing the message.
+17:16:50 <moneromooo> AFAIK the condition is "you don't trust all members", right ?
+17:17:02 <UkoeHB> yes
+17:17:05 <moneromooo> If so, exchanges should be alright using it.
+17:17:09 <ErCiccione> ^ much better option. Disabling a feature that we don't know who uses it is a dangerous path
+17:17:26 <UkoeHB> moneromooo: is that something you could work on?
+17:17:29 <gingeropolous> sorry to be stupid about this. what do you mean by disable
+17:18:02 <UkoeHB> gingeropolous: make the calls to sign multisig txs throw
+17:18:03 <moneromooo> I suppose I could. Easy enough so I don't get brain on fire.
+17:18:22 <gingeropolous> UkoeHB, in a wallet implementation? 
+17:18:31 <rbrunner> Thankfully the CLI is the only wallet where everybody can freely multisig
+17:18:35 <moneromooo> No way I can usefully review the patch btw, before you ask (sorry).
+17:18:42 <UkoeHB> yeah that's ok
+17:19:07 <gingeropolous> my point is that its not consensus level. Further, with the notion that the core implementation of the software should provide "the best", disable it with the release.
+17:19:17 <gingeropolous> if someone really wants to do it, they can use an old wallet or compile whatever
+17:19:21 <gingeropolous> its not like it can really be shut off
+17:19:23 <ErCiccione> alright, so that is sorted. Now the thing is, do we want to go on without multisig in the hard fork then? Sounds like we don't really have a choice, as we lack reviewers
+17:19:50 <rbrunner> I thought the idea is to go with multisig, but with a big fat warning?
+17:20:15 <moneromooo> Actually, I'll make a "enable_multisig" bool setting in the wallet, off by default. Simpler, more user friendly, and works for RPC in a transparent way.
+17:20:58 <UkoeHB> moneromooo: should be good, with a confirmation message that says "multisig is experimental and possibly exploitable, use at your own risk"?
+17:21:08 <moneromooo> Yes.
+17:21:22 <moneromooo> Feel free to paste me a message that explains the risks.
+17:21:30 <UkoeHB> ok
+17:21:40 <ErCiccione> alright, so
+17:22:07 <ErCiccione> we have no choice than to not include 8149 in the network upgrade
+17:22:20 <ErCiccione> but we really really have to activate the community in search for a reviewer
+17:22:28 <UkoeHB> if we take that route of 'experiment and risky', then merging 8149 early may be ok since it is significantly less risky than the current stuff
+17:22:40 <ErCiccione> multisig is crucial for importantant projects currently being built, so IMO (yes, i'm biased), that should be a priority
+17:23:04 <ErCiccione> UkoeHB: That sounds reasonable. Opinions?
+17:23:08 <rbrunner> With "early" you mean tomorrow, right? For branching on Monday
+17:23:41 <ErCiccione> it's a risky approach, but if we already flag it as insecure might have sense
+17:23:56 <jberman[m]> sound reasonable to me for the release. as far as getting reviewers, why not tap past auditors who audited BP/BP+?
+17:24:08 <rbrunner> I would merge that any day, frankly
+17:24:09 <UkoeHB> maybe? with follow-up PRs to clean up anything reviewers find...
+17:24:19 <hyc> that sounds ok
+17:24:39 <hyc> if they get feedback to us in time it can be fixed in the branch before release
+17:24:42 <hyc> if not, not.
+17:25:47 <ErCiccione> do we have consensus on this? (merge 8149 by tomorrow, add the warning message)
+17:25:53 <UkoeHB> jberman[m]: the problem is third-party auditors don't have a broad insight into the monero protocol or code stack; they are great for targeted audits (e.g. proof implementations), but it isn't clear they are great for broader reviews (I could be wrong)
+17:25:56 <gingeropolous> id say if 8149 is in without default disable, the user prompt / warning should be like multiple OKs
+17:26:05 <gingeropolous> er, i meant default disable
+17:26:47 <gingeropolous> because I know some software users that just click through things very quickly....
+17:26:53 <chesterfield[m]> UkoeHB: Would be nice to start scaling something like this up so Monero does have better audit options in the future
+17:29:04 <UkoeHB> well, I don't know how to do that lol
+17:29:15 <ErCiccione> UkoeHB: Would it make sense to ask to audit the PR, after it's merged? It's a much narrower scope, but still useful
+17:29:56 <hyc> narrowing scope sounds reasonable\
+17:30:06 <UkoeHB> I can squash 8149 on monday. Someone should at least check I am not inserting some shit into the commits lol.
+17:31:14 <rbrunner> We can hardfork testnet on the master branch and postpone branching for a small number of days, technically, right?
+17:31:38 <UkoeHB> ErCiccione: we can probably request an audit for just the signing component (making CLSAGs); everything about the tx protocol is really our domain
+17:34:00 <ErCiccione> Would be a good start IMO
+17:34:19 <ErCiccione> we still need the core parts reviewed as far as i understood, but the two things could go in parallel no?
+17:34:48 <UkoeHB> the original PR author said he was going to write some documentation/proofs for the signing component (which would be very useful for auditing), but...
+17:35:09 <UkoeHB> yes
+17:35:15 <ErCiccione> yeah disappeared, leaving some critical code right there. Not an ideal situation
+17:36:30 <ErCiccione> anyway, let's go on then. As far as i can tell, we are all fine with merging the pr as it is,
+17:37:01 <ErCiccione> there are different opinions about a warning or disabling entirely. I strongly favour the former, for the reasons i mentioned above
+17:37:47 <hyc> enabling via wallet setting, disabled by default, sounds best
+17:38:07 <UkoeHB> works for me
+17:38:10 <jberman[m]> +1
+17:38:13 <rbrunner> Yup
+17:38:35 <ErCiccione> that shouldn't disrupt current users right?
+17:39:14 <UkoeHB> they might have to update their usage to enable signing
+17:39:37 <UkoeHB> which would be good, so users will gain more awareness (if such users even exist)
+17:40:07 <ErCiccione> we should definitely let them know as soon as they try to use multisig though
+17:40:15 <ErCiccione> if that's what people prefer, but looks like it
+17:40:27 <ErCiccione> that = disabling it by default
+17:41:39 <UkoeHB> anything else in the agenda?
+17:41:52 <rbrunner> Unfortunately my #8076 is still not ready. There is special case that can lead to a sensitivity info leak, and another special case where a tx can go unreported
+17:42:00 <rbrunner> I can work on it tomorrow, but not sure I will be able to complete
+17:42:27 <rbrunner> jberman 's eagle eyes spotted those cases :)
+17:42:35 <rbrunner> Which is good of course
+17:43:29 <ErCiccione> alright. Anything else to discuss related to the netwrok upgrade?
+17:44:00 <jberman[m]> good news: I've identified some daemon reliability fixes that are super small/easy to fix that I'm hoping we can get included as well (8324, 8326, and 1 more possibly 2 more incoming today). Running the fixes, I don't see the warnings of 6938 anymore and don't have tx submission issues
+17:44:28 <hyc> sounds promising
+17:45:16 <ErCiccione> Nice! Hopefully they can be reviewed before Monday
+17:45:31 <ErCiccione> anything else? Otherwise we can conclude here
+17:46:23 <ErCiccione> btw, news people of Monero (Monero observer, monero moon etc), please point out in your reports that we need community actions to find reviewers for multisig, it wiwould help 🙂
+17:47:57 <rbrunner> Can't to harm, yes
+17:48:01 <rbrunner> *do
+17:49:53 <ErCiccione> s/wiwould/would/
+17:49:54 <ErCiccione> alright, thanks everyone for coming. Enjoy the rest of your saturday
+17:49:54 <ErCiccione> the meeting is over, but obviously feel free to continue the conversations above 🙂
+[post-meeting discussions: https://libera.monerologs.net/monero-dev/20220514#c94966]

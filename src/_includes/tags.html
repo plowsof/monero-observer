@@ -1,0 +1,65 @@
+<h1>[Tags]</h1>
+<a href="/tag/pinned"><strong>[pinned]</strong></a> <span><strong>- Monero Observer featured reports.</strong></span>
+{% capture temptags %}
+  {% for tag in site.tags %}
+    {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+  {% endfor %}
+{% endcapture %}
+{% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
+{% for temptag in sortedtemptags %}
+  {% assign tagitems = temptag | split: '#' %}
+  {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
+  <p>
+  {% unless tagname == "pinned" %}
+  <a href="/tag/{{ tagname }}">
+  [{{ tagname }}]</a>
+  <span> 
+  {% if tagname == "culture" %}
+  - Monero community anecdotes, interviews and talks.
+  {% elsif tagname == "services" %}
+  - Monero community projects, services and tools.
+  {% elsif tagname == "events" %}
+  - Monero community meetings and other events.
+  {% elsif tagname == "CCS" %}
+  - Monero Community Crowdfunding System proposals. 
+  {% elsif tagname == "dev" %}
+  - Monero software development updates.
+  {% elsif tagname == "mining" %}
+  - Monero mining news and updates.
+  {% elsif tagname == "merchants" %}
+  - Monero merchants and buy/sell community ads. 
+  {% elsif tagname == "guides" %}
+  - Monero community guides/tutorials and resource lists.
+  {% elsif tagname == "wallets" %}
+  - Monero wallets news.
+  {% elsif tagname == "bounties" %}
+  - Monero bounties and rewards (non-CCS).
+  {% elsif tagname == "analysis" %}
+  - Monero Observer analysis reports (weekly XMR TA).
+  {% elsif tagname == "jobs" %}
+  - Monero jobs, tasks and commissions.
+  {% elsif tagname == "research" %}
+  - Monero research reports.
+  {% elsif tagname == "meta" %}
+  - Monero Observer project meta reports.
+  {% elsif tagname == "blitz" %}
+  - Monero Observer Blitz reports (monthly).
+  {% elsif tagname == "security" %}
+  - Monero security reports.
+  {% elsif tagname == "art" %}
+  - Monero community art and graphics.
+  {% elsif tagname == "community" %}
+  - Latest Monero Observer community messages.
+  {% elsif tagname == "policy" %}
+  - Latest Monero policy reports.
+  {% elsif tagname == "calendar" %}
+  - Monero community workgroup meetings calendar.
+  {% elsif tagname == "editorials" %}
+  - Latest Monero Observer opinion pieces.
+  {% elsif tagname == "logs" %}
+  - Monero Workgroup Meetings log summaries.
+  {% endif %}
+  </span>
+  {% endunless %}
+  </p>
+{% endfor %}

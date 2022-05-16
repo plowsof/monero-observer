@@ -1,0 +1,629 @@
+modified: 12 May 2022
+toc2:
+  - letter: A
+    subfolderitems:
+      - page: Atomic Swap Implementations
+        subsubfolderitems:
+          - name: COMIT (XMR-BTC)
+            www: https://comit.network
+            code: https://github.com/comit-network/xmr-btc-swap
+            email: hello@comit.network
+          - name: Farcaster Project (XMR-BTC)
+            code: https://github.com/farcaster-project
+          - name: noot's Atomic Swap prototype (XMR-ETH)
+            code: https://github.com/noot/atomic-swap#readme
+      - page: Atomic Swap Providers
+        subsubfolderitems:
+          - name: UnstoppableSwap
+            www: https://unstoppableswap.net/
+      - page: ATM Lists
+        subsubfolderitems:
+          - name: XMRGuide/Thotbot List
+            www: https://xmrguide.org/atms
+            onion: http://xmrguide25ibknxgaray5rqksrclddxqku3ggdcnzg4ogdi5qkdkd2yd.onion/atms
+          - name: Coin ATM Radar
+            www: https://coinatmradar.com/
+            email: support@coinatmradar.com
+      - page: Address Generators (Offline)
+        subsubfolderitems:
+          - name: MoneroAddress by moneromooo
+            www: https://moneroaddress.org
+            code: https://github.com/moneromooo-monero/monero-wallet-generator/blob/master/monero-wallet-generator.html
+          - name: xmr.llcoins.net by luigi1111
+            www: https://xmr.llcoins.net/
+            code: https://github.com/luigi1111/xmr.llcoins.net/
+      - page: Address Generators (Vanity)
+        subsubfolderitems:
+          - name: vanity_xmr_cuda by sech1
+            code: https://github.com/SChernykh/vanity_xmr_cuda
+          - name: vanity-monero by Equim-chan
+            code: https://github.com/monero-ecosystem/vanity-monero
+  - letter: B
+    subfolderitems:
+      - page: Block Explorers
+        subsubfolderitems:
+          - name: Local Monero blocks
+            www: https://localmonero.co/blocks
+          - name: Explore Monero
+            www: https://www.exploremonero.com/
+          - name: Monero Vision
+            www: https://monerovision.com/
+            code: https://github.com/MyCryptoHQ/MoneroVision
+          - name: Xmrchain
+            www: https://xmrchain.net/
+          - name: Monerohash explorer
+            code: https://github.com/moneroexamples/onion-monero-blockchain-explorer
+            www: https://monerohash.com/explorer/
+          - name: Sethforprivacy's explorer
+            www: https://explore.sethforprivacy.com/
+            onion: http://exploredv42tq2nowrll6f27nuymenndwupueqvyugaqzbrvmjhhceqd.onion/
+            code: https://github.com/moneroexamples/onion-monero-blockchain-explorer
+      - page: Books
+        subsubfolderitems:
+          - name: Zero to Monero - Second Edition
+            www: https://getmonero.org/library/Zero-to-Monero-2-0-0.pdf
+            onion: http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/library/Zero-to-Monero-2-0-0.pdf
+            code: https://github.com/UkoeHB/Monero-RCT-report
+          - name: Zero to Monero - First Edition
+            www: https://getmonero.org/library/Zero-to-Monero-1-0-0.pdf
+            onion: http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/library/Zero-to-Monero-1-0-0.pdf
+            code: https://github.com/UkoeHB/Monero-RCT-report
+          - name: Mastering Monero
+            www: https://masteringmonero.com/free-download.html
+  - letter: C
+    subfolderitems:    
+      - page: Cheatsheets
+        subsubfolderitems:
+          - name: Monero Addresses Cheatsheet
+            www: https://getmonero.org/library/MoneroAddressesCheatsheet20201206.pdf
+            onion: http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/library/MoneroAddressesCheatsheet20201206.pdf
+          - name: Rings Cheatsheet
+            www: https://getmonero.org/library/RingsCheatsheet20210301.pdf
+            onion: http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/library/RingsCheatsheet20210301.pdf
+          - name: RingCT Cheatsheet
+            www: https://getmonero.org/library/RctCheatsheet20210604.pdf
+            onion: http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/library/RctCheatsheet20210604.pdf
+      - page: Charts
+        subsubfolderitems:
+          - name: Monero Pro (Moneroj.net)
+            www: https://moneroj.net
+            email: morpheus.anonymous@protonmail.com
+  - letter: D
+    subfolderitems:   
+      - page: Documentation
+        subsubfolderitems:
+          - name: Moneropedia
+            www: https://getmonero.org/resources/moneropedia/ 
+            onion: http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/resources/moneropedia/
+          - name: Daemon RPC
+            www: https://web.getmonero.org/resources/developer-guides/daemon-rpc.html
+            onion: http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/resources/developer-guides/daemon-rpc.html
+          - name: Wallet RPC
+            www: https://web.getmonero.org/resources/developer-guides/wallet-rpc.html
+            onion: http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/resources/developer-guides/wallet-rpc.html 
+          - name: Monerodocs
+            www: https://monerodocs.org
+            onion: http://bumz4sduzxzlobbgzy5fiufdflg3mo2jyecdwdx5rphrqldms7wlmiid.onion/
+            code: https://github.com/monerodocs/md/
+      - page: Domain Registrars
+        subsubfolderitems:
+          - name: Njalla
+            www: https://njal.la/
+            onion: http://njallalafimoej5i4eg7vlnqjvmb6zhdh27qxcatdn647jtwwwui3nad.onion/
+  - letter: E
+    subfolderitems:
+      - page: Exchanges Lists
+        subsubfolderitems:
+          - name: KYCnot.me/pluja's List
+            www: https://kycnot.me/
+            code: https://codeberg.org/pluja/kycnot.me
+            email: contact@kycnot.me
+      - page: Exchanges (P2P)
+        subsubfolderitems:
+          - name: Local Monero
+            www: https://localmonero.co/
+            onion: http://nehdddktmhvqklsnkjqcbpmb63htee2iznpcbs5tgzctipxykpj6yrid.onion
+            code: https://github.com/AgoraDesk-LocalMonero
+            email: support@localmonero.freshdesk.com
+          - name: Bisq
+            www: https://bisq.network/
+            code: https://github.com/bisq-network
+            matrix: https://matrix.to/#/#freenode_#bisq:matrix.org
+          - name: Haveno (WiP)
+            www: https://haveno.exchange/
+            code: https://github.com/haveno-dex/
+            matrix: https://matrix.to/#/#haveno.network?via=libera.chat&via=matrix.org&via=monero.social
+      - page: Exchanges (CEX)
+        subsubfolderitems:
+          - name: Binance
+            www: https://www.binance.com/en/trade/XMR_USDT
+          - name: Kraken
+            www: https://trade.kraken.com/markets/kraken/xmr/usd
+          - name: KuCoin
+            www: https://trade.kucoin.com/XMR-USDT
+          - name: Poloniex
+            www: https://poloniex.com/exchange/USDT_XMR
+          - name: Bitfinex
+            www: https://www.bitfinex.com/t/XMR:USD
+          - name: Tradeogre
+            www: https://tradeogre.com/exchange/BTC-XMR
+          - name: Huobi Global
+            www: https://www.huobi.com/en-us/exchange/xmr_usdt
+          - name: HitBTC
+            www: https://hitbtc.com/xmr-to-usdt
+      - page: Exchanges (Instant)
+        subsubfolderitems:
+          - name: Sideshift
+            www: https://sideshift.ai/
+          - name: Elude
+            www: https://elude.in
+            onion: http://eludemailxhnqzfmxehy3bk5guyhlxbunfyhkcksv4gvx6d3wcf6smad.onion/exchange
+            email: support@elude.in
+          - name: Xchange.me
+            www: https://xchange.me
+            onion: http://aa7oyok6dxgyedeteldaumqjernm5ai7dnpqayy3p4q7solc6dxi5vad.onion/
+          - name: Godex
+            www: https://godex.io/
+            email: support@godex.io
+          - name: Stealthex
+            www: https://stealthex.io/
+            email: support@stealthex.io
+          - name: Flyp.me
+            www: https://flyp.me/en
+            email: support@flyp.me
+          - name: Swapzone
+            www: https://swapzone.io/
+            email: e.drabkina@swapzone.io
+      - page: Events
+        subsubfolderitems:
+          - name: MoneroKon
+            www: https://monerokon.com/
+            matrix: https://matrix.to/#/#monero-events:monero.social
+            email: orga@monerokon.com
+  - letter: F
+    subfolderitems:
+      - page: Funding Systems
+        subsubfolderitems:
+          - name: CCS (Community Crowdfunding System)
+            www: https://ccs.getmonero.org/
+            code: https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests?scope=all&state=all 
+          - name: Bounties (Monero.social)
+            www: https://bounties.monero.social/
+            matrix: https://matrix.to/#/#monero-bounties:monero.social
+          - name: MAGIC (by Justin Ehrenhofer)
+            www: https://magicgrants.org/Monero-Fund/
+            email: info@magicgrants.org
+            code: https://github.com/MagicGrants
+          - name: XMR Wishlist as a Service (by plowsof)
+            code: https://github.com/plowsof/xmr-wishlist-aaS 
+          - name: Xmrstarter (by Zombie Master)
+            www: https://xmrstarter.com
+            email: zombie_master@danwin1210.de
+      - page: Forums
+        subsubfolderitems:
+          - name: Monero Punks Collective
+            www: https://forum.moneropunks.org
+            onion: http://gay6icg34lq4jjzgjw2fof5gj3pqzvakniwbufk23vhq4fdof4r223qd.onion/
+          - name: PrivateMonero Forum
+            www: https://forum.privatemonero.org/
+          - name: Monero Space Forum
+            www: https://forum.monero.space/
+  - letter: G
+    subfolderitems:
+      - page: Gambling
+        subsubfolderitems:
+          - name: Monero.Win
+            www: https://monero.win
+          - name: Betplay
+            www: https://betplay.io
+          - name: Mokazino
+            www: https://mokazino.net/
+      - page: Graphics
+        subsubfolderitems:
+          - name: Monero.Graphics
+            www: https://monero.graphics
+            email: gnuteardrops@monero.graphics
+          - name: Monerochan Art
+            www: https://monerochan.art
+          - name: The Monera Art
+            www: https://www.themonera.art/
+      - page: Goods (Digital)
+        subsubfolderitems:
+          - name: ProxyStore
+            www: https://digitalgoods.proxysto.re/
+            onion: http://digitazyyxyihwwzudp5syxxyn3qhcd63wqcha2dxpfqiyydmrgdiaad.onion/
+            email: mail@proxysto.re
+            matrix: https://matrix.to/#/#proxystore:systemli.org
+            xmpp: proxystore-otr@jabber.systemli.org
+          - name: Keys4coins
+            www: https://keys4coins.com
+          - name: CoinCards
+            www: https://coincards.com/
+      - page: Goods
+        subsubfolderitems:
+          - name: MoneroMerch
+            www: https://moneromerch.com/
+            email: support@moneromerch.com
+          - name: Monero Style
+            www: https://monero.style/
+      - page: Guides
+        subsubfolderitems:
+          - name: Getmonero.org User Guides
+            www: https://getmonero.org/resources/user-guides/
+            onion: http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/resources/user-guides/
+          - name: Run a Monero Node (by Seth)
+            www: https://blog.sethforprivacy.com/guides/run-a-monero-node/
+            onion: http://sfprivg7qec6tdle7u6hdepzjibin6fn3ivm6qlwytr235rh5vc6bfqd.onion/guides/run-a-monero-node/
+          - name: Run an atomic swap provider (Advanced) (by Seth)
+            www: https://blog.sethforprivacy.com/guides/run-an-atomic-swap-provider-advanced/
+            onion: http://sfprivg7qec6tdle7u6hdepzjibin6fn3ivm6qlwytr235rh5vc6bfqd.onion/guides/run-an-atomic-swap-provider-advanced/
+          - name: Performing Bitcoin <> Monero Atomic Swaps (by Seth)
+            www: https://blog.sethforprivacy.com/guides/bitcoin-monero-atomic-swaps/
+            onion: http://sfprivg7qec6tdle7u6hdepzjibin6fn3ivm6qlwytr235rh5vc6bfqd.onion/guides/bitcoin-monero-atomic-swaps/
+          - name: Run and mine on a p2pool Node (by Seth)
+            www: https://blog.sethforprivacy.com/guides/run-a-p2pool-node/
+            onion: http://sfprivg7qec6tdle7u6hdepzjibin6fn3ivm6qlwytr235rh5vc6bfqd.onion/guides/run-a-p2pool-node/
+          - name: Running a monero node over Tor (by kico)
+            www: https://medium.com/@kic0/running-a-monero-node-over-tor-49c3de49eda8
+          - name: Ultimate guide for new Monero contributors (by escapethe3RA)
+            www: https://monero.observer/ultimate-guide-new-monero-contributors/
+          - name: What MJ-XMR Has Been Working On – A Layman's Guide (by john_r365)
+            www: https://resilience365.com/interview-with-mj-xmr/
+          - name: Cold storage Monero transactions in Qubes OS (by Piotr Krol)
+            www: https://invidious.snopyta.org/watch?v=KdDr6TiqF0k&t=13032
+          - name: How To - Atomic Swaps (by Difficult-Outside350)
+            www: https://monero.stackexchange.com/a/13347
+          - name: Mining Monero with P2Pool - Windows; Quick start guide (by moneroguides)
+            www: https://yewtu.be/watch?v=yfbvTksF9ic
+          - name: How to sell stuff online in the most BASED way possible (by Spirobel)
+            www: https://yewtu.be/watch?v=9fsdWJo2QFs
+          - name: Guide to verifying, running and updating the official Monero CLI wallet on Linux (by escapethe3RA)
+            www: https://monero.observer/verify-install-update-monero-cli-wallet-linux-guide
+          - name: MoneroGuides Tutorials
+            www: https://moneroguides.org
+            matrix: https://matrix.to/#/#monero-guides:matrix.org
+            code: https://github.com/moneroguides
+          - name: Dispelling Monero FUD (by Sethforprivacy)
+            www: https://blog.sethforprivacy.com/posts/dispelling-monero-fud/
+            onion: http://sfprivg7qec6tdle7u6hdepzjibin6fn3ivm6qlwytr235rh5vc6bfqd.onion/posts/dispelling-monero-fud/
+          - name: Setting up your own public Monero remote node (by PrivateMonero.org)
+            www: https://libredd.it/rpsvsl/
+          - name: P2Pool and Its Role in Decentralizing Monero Mining (by Sethforprivacy)
+            www: https://localmonero.co/knowledge/p2pool-decentralizing-monero-mining
+            onion: http://nehdddktmhvqklsnkjqcbpmb63htee2iznpcbs5tgzctipxykpj6yrid.onion/nojs/knowledge/p2pool-decentralizing-monero-mining
+          - name: Teach Yourself Crypto course (by Harsh Strongman)
+            www: https://teachyourselfcrypto.com/#Monero
+          - name: How to run a monero full node on Tails (by Unkn8wn69)
+            www: https://libredd.it/sljq4z/
+          - name: Monero Dev Guides (by reemuru)
+            code: https://github.com/hyahatiph-labs/hlc/tree/main/xmr-dev-guides
+          - name: Monero full node via Tor with Docker Compose (by Luigi Tech)
+            www: https://yewtu.be/watch?v=OviYhLZ02qg
+  - letter: H
+    subfolderitems:
+      - page: Hardware Wallets
+        subsubfolderitems:
+          - name: Ledger
+            www: https://support.ledger.com/hc/en-us/articles/360006352934-Monero-XMR-
+          - name: Trezor
+            www: https://wiki.trezor.io/Monero_(XMR)
+            code: https://github.com/trezor
+      - page: Hardware Nodes
+        subsubfolderitems:
+          - name: Monerobox
+            www: https://monerobox.store/
+            code: https://github.com/monero-ecosystem/monerobox
+  - letter: I
+    subfolderitems:
+  - letter: J
+    subfolderitems:
+  - letter: K
+    subfolderitems:
+  - letter: L
+    subfolderitems:
+      - page: Lists
+        subsubfolderitems:
+          - name: List of Monero devs (by plowsof)
+            www: https://monerodevs.org/
+            code: https://github.com/plowsof/monerodevs.org
+          - name: MoneRoar onion site
+            onion: http://moneroar4fiojlkzkvwgt25rp6vifswcpwaxbzlhfkdenczbhc4luqad.onion/ 
+          - name: Monero Community Index
+            www: https://monerocommunityindex.neocities.org/
+          - name: Directory of Monero merchants
+            www: https://cryptwerk.com/pay-with/xmr/
+          - name: Open Research Questions (by Rucknium)
+            code: https://github.com/monero-project/research-lab/issues/94
+          - name: CoinConsume web hosting
+            www: https://www.coinconsume.com/category/web-hosting
+          - name: Monerica link directory
+            www: https://monerica.com/
+          - name: Monetory.io
+            www: https://monetory.io
+          - name: MoneroResearch.info (by Rucknium & plowsof)
+            www: https://moneroresearch.info/
+            onion: http://clszzn47y57uwkrgnfc7wllalvodopzqrp4spb6zbz2t3ulxngcfqsad.onion/
+  - letter: M
+    subfolderitems:
+      - page: Mining Pool Lists
+        subsubfolderitems:
+          - name: pools.xmr.wiki
+            www: https://pools.xmr.wiki/
+            onion: http://monero7cefasycyt52imkjs254fuga4pnv5jxwid2mhycmgnwsnviuad.onion/
+      - page: Mining Software
+        subsubfolderitems:
+          - name: XMRig
+            code: https://github.com/xmrig/xmrig
+            www: https://xmrig.com/
+            email: support@xmrig.com  
+          - name: CSminer
+            www: https://cryptonote.social/tools/csminer
+            code: https://github.com/cryptonote-social/csminer
+            email: cryptonote.social@gmail.com
+      - page: Mining Stats
+        subsubfolderitems:
+          - name: MiningPoolStats
+            www: https://miningpoolstats.stream/monero
+          - name: MineXMR
+            www: https://minexmr.com/pools.html
+      - page: Mining Pools
+        subsubfolderitems:
+          - name: MineXMR (Global)
+            www: https://minexmr.com
+            email: support@minexmr.com
+          - name: P2Pool (P2P)
+            www: https://p2pool.io
+            code: https://github.com/SChernykh/p2pool/releases/latest
+          - name: Nanopool (Global)
+            www: https://xmr.nanopool.org
+          - name: SupportXMR (Global)
+            www: https://www.supportxmr.com
+            email: support@supportxmr.com
+          - name: Hashvault (Global)
+            www: https://monero.hashvault.pro/en/
+            onion: http://hashvaultsvg2rinvxz7kos77hdfm6zrd5yco3tx2yh2linsmusfwyad.onion/monero/home
+          - name: Monerod.org
+            www: https://monerod.org
+            onion: http://monerod2jqtblreunnwtzqbjjj4slvsd3cjbhnzt2evwnry5u772l3qd.onion
+            code: https://git.monerod.org/monerodproject
+      - page: Marketplaces
+        subsubfolderitems:
+          - name: Anoncoj
+            www: https://www.anoncoj.ch/  
+          - name: Bitejo
+            www: https://bitejo.com/
+            onion: http://bitejo2almh6ldyaipf6m3atheyjv5mjkudm2pxfehqro3d4rq3zy6ad.onion/
+            email: bitejo@bitejo.com
+          - name: Foirejo
+            code: https://github.com/MasFlam/foirejo
+      - page: Misc
+        subsubfolderitems:
+          - name: Monero General Info-Dump
+            www: https://moneroinfodump.neocities.org/  
+            matrix: https://matrix.to/#/#xmrgeneral:matrix.org
+          - name: Libera Monerologs
+            www: https://libera.monerologs.net/
+          - name: Monero Boats
+            www: https://monero.boats
+            code: https://codeberg.org/pluja/monero.boats
+          - name: OrangeFren
+            www: https://orangefren.com/
+          - name: Monero Boating Club
+            www: https://moneroboating.com/
+            email: hello@moneroboating.com
+          - name: Xmrprise
+            www: https://xmrpri.se
+            code: https://codeberg.org/orenom/xmrprise
+          - name: Cryptonote Scam Fragments (repo by fluffypony)
+            code: https://github.com/fluffypony/cryptonote-scam-fragments
+          - name: Monero Devices
+            www: https://shop.monerodevices.com/
+          - name: Moner.ooo (XMR-fiat conversion)
+            www: https://moner.ooo/
+            matrix: https://matrix.to/#/#monerooo:monero.social
+          - name: XMR-Multisweeper
+            code: https://github.com/benevanoff/xmr-multisweeper 
+          - name: Python Monero Database Reader
+            code: https://github.com/AnonimaUzanto/py-monerodb
+          - name: post_logs.py (by plowsof)
+            code: https://github.com/plowsof/post-libera-meeting-logs
+  - letter: N
+    subfolderitems:
+      - page: Node List/Map
+        subsubfolderitems:
+          - name: Monero.fail
+            www: https://monero.fail/
+          - name: MoneroHash
+            www: https://monerohash.com/nodes-distribution.html
+          - name: Ditatompel
+            www: https://www.ditatompel.com/monero/remote-node
+  - letter: O
+    subfolderitems:
+  - letter: P
+    subfolderitems:
+      - page: Payment Gateways
+        subsubfolderitems:
+          - name: CoinPayments
+            www: https://www.coinpayments.net
+          - name: Globee
+            www: https://globee.com/
+          - name: NOWPayments
+            www: https://nowpayments.io
+            email: support@nowpayments.io
+          - name: Swirl
+            www: https://swirlpay.io/assets/
+          - name: Vigla
+            www: https://vigla.biz/
+            email: info@vigla.biz
+          - name: CryptoWoo
+            www: https://www.cryptowoo.com/
+            email: support@cryptowoo.com
+          - name: Monero Gateway for WooCommerce
+            code: https://github.com/monero-integrations/monerowp
+      - page: Publications
+        subsubfolderitems:
+          - name: Monero Moon (by John Foss)
+            www: https://medium.com/themoneromoon/
+          - name: Revuo Monero (by rottenwheel)
+            www: https://localmonero.co/revuo/
+            onion: http://nehdddktmhvqklsnkjqcbpmb63htee2iznpcbs5tgzctipxykpj6yrid.onion/nojs
+  - letter: Q
+    subfolderitems:
+  - letter: R
+    subfolderitems:
+      - page: Remote Nodes (Onions)
+        subsubfolderitems:
+          - name: XMRGuide/Thotbot List
+            www: https://xmrguide.org/remote_nodes
+            onion: http://xmrguide25ibknxgaray5rqksrclddxqku3ggdcnzg4ogdi5qkdkd2yd.onion/remote_nodes
+          - name: PrivateMonero.org
+            www: https://privatemonero.org/node/
+            onion: http://prvtxmrj7rfc5pupyxhazg3ulxumnti3fhrozgmx3floqcqufjy2srid.onion/node/
+            email: admin@privatemonero.org
+            xmpp: admin_privatemonero@jabber.calyxinstitute.org
+  - letter: S
+    subfolderitems:
+      - page: Services
+        subsubfolderitems:
+          - name: XMR Node Cannon
+            www: https://xmrcannon.net
+            code: https://github.com/lalanza808/xmr-node-cannon-do
+          - name: Mataroa Blogging Platform
+            www: https://mataroa.blog/
+          - name: Monero Supplies (by monerobull)
+            www: https://monerosupplies.com/
+      - page: Support
+        subsubfolderitems:
+          - name: Monero Stackexchange
+            www: https://monero.stackexchange.com/
+          - name: Monero Support (Subreddit)
+            www: https://libredd.it/r/monerosupport/
+  - letter: T
+    subfolderitems:
+      - page: Technical Papers
+        subsubfolderitems:
+          - name: MRL-0001 - A Note on Chain Reactions in Traceability in CryptoNote 2.0
+            www: https://getmonero.org/resources/research-lab/pubs/MRL-0001.pdf
+            onion: http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/resources/research-lab/pubs/MRL-0001.pdf
+          - name: MRL-0002 - Counterfeiting via Merkle Tree Exploits within Virtual Currencies Employing the CryptoNote Protocol
+            www: https://getmonero.org/resources/research-lab/pubs/MRL-0002.pdf
+            onion: http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/resources/research-lab/pubs/MRL-0002.pdf
+          - name: MRL-0003 - Monero is Not That Mysterious
+            www: https://getmonero.org/resources/research-lab/pubs/MRL-0003.pdf
+            onion: http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/resources/research-lab/pubs/MRL-0003.pdf
+  - letter: U
+    subfolderitems:
+  - letter: V
+    subfolderitems:
+      - page: VPN Providers
+        subsubfolderitems:
+          - name: IVPN
+            www: https://www.ivpn.net/
+            code: https://github.com/ivpn
+            email: support@ivpn.net
+      - page: VPS Providers
+        subsubfolderitems:
+          - name: Packet Point
+            www: https://packetpoint.ca/
+            email: support@packetpoint.ca
+      - page: Video Channels
+        subsubfolderitems:
+          - name: MoneroTalk
+            www: https://odysee.com/@MoneroTalk
+          - name: Monero Matteo
+            www: https://odysee.com/@MoneroMatteo
+          - name: Kevin Wad
+            www: https://yewtu.be/channel/UCMg5jHjEp59TKy_0tdoeXnQ
+          - name: Crypt0 Bear
+            www: https://yewtu.be/channel/UCWC1InTHly5Tg-7e5P_S5Rw
+          - name: Monero Community Workgroup
+            www: https://odysee.com/@monerocommunityworkgroup
+          - name: Monero Guides
+            www: https://yewtu.be/channel/UCWeGibnI0h07pIPiX945DBg
+      - page: Video Services
+        subsubfolderitems:
+          - name: Madiator
+            www: https://madiator.com
+            onion: http://ryhs2pyzf6kvzpxv3xbcscaukf2ez4ixbbyk7ewzmj6gxqvmt65sqnyd.onion/
+  - letter: W
+    subfolderitems:
+      - page: Wallets
+        subsubfolderitems:
+          - name: Monero GUI Wallet
+            www: https://getmonero.org/downloads/#gui
+            onion: http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/downloads/#gui
+            code: https://github.com/monero-project/monero-gui
+          - name: Monero CLI Wallet
+            www: https://getmonero.org/downloads/#cli
+            onion: http://monerotoruzizulg5ttgat2emf4d6fbmiea25detrmmy7erypseyteyd.onion/downloads/#cli
+            code: https://github.com/monero-project/monero
+          - name: Cake Wallet
+            www: https://cakewallet.io
+            code: https://github.com/cake-tech/cake_wallet
+            email: support@cakewallet.com
+          - name: Feather Wallet
+            www: https://featherwallet.org
+            onion: http://featherdvtpi7ckdbkb2yxjfwx3oyvr3xjz3oo4rszylfzjdg6pbm3id.onion
+            email: dev@featherwallet.org
+            code: https://git.featherwallet.org/feather/feather
+            matrix: https://matrix.to/#/#feather:matrix.org
+          - name: Monerujo
+            www: https://www.monerujo.io
+            email: help@monerujo.io
+            code: https://github.com/m2049r/xmrwallet
+          - name: MyMonero
+            www: https://mymonero.com
+            code: https://github.com/mymonero/
+            email: support@mymonero.com
+          - name: Monero.com by Cake Wallet
+            www: https://monero.com
+          - name: RINO (BETA)
+            www: https://rino.io
+            email: support@rino.io
+      - page: Workgroups
+        subsubfolderitems:
+          - name: Monero Core Team
+            matrix: https://matrix.to/#/#monero-dev:monero.social
+            email: dev@getmonero.org
+            code: https://github.com/monero-project
+          - name: Community Workgroup
+            matrix: https://matrix.to/#/#monero-community:monero.social
+            www: https://www.communityworkgroup.org/
+            code: https://repo.getmonero.org/monero-project/
+          - name: Development Workgroup
+            code: https://github.com/monero-project/monero
+            matrix: https://matrix.to/#/#libera_#monero-dev:matrix.org
+          - name: Website Workgroup
+            matrix: https://matrix.to/#/#monero-site:haveno.network
+            www: https://github.com/monero-project/monero-site
+          - name: Localization Workgroup
+            www: https://translate.getmonero.org/
+            matrix: https://matrix.to/#/#monero-translations:monero.social
+            code: https://github.com/monero-ecosystem/monero-translations
+          - name: Monero Outreach
+            code: https://github.com/monero-ecosystem/outreach-docs
+            matrix: https://matrix.to/#/#monero-outreach:monero.social
+          - name: Research Lab
+            matrix: https://matrix.to/#/#monero-research-lab:matrix.org
+            code: https://github.com/monero-project/research-lab
+          - name: Monero Space
+            matrix: https://matrix.to/#/#monero-space:monero.social
+            www: https://monero.space/
+          - name: Monero Policy Working Group
+            email: policy@getmonero.org
+            matrix: https://matrix.to/#/#monero-policy:matrix.org
+            www: https://moneropolicy.org/
+          - name: Malware Response Workgroup
+            www: https://mrw.getmonero.org/
+
+  - letter: X
+    subfolderitems:
+  - letter: Y
+    subfolderitems:
+  - letter: Z
+    subfolderitems:    
+    
+    
+    
+    
+

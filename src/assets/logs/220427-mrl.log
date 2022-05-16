@@ -1,0 +1,108 @@
+17:01:15 <UkoeHB> meeting time https://github.com/monero-project/meta/issues/697
+17:01:15 <UkoeHB> 1. greetings
+17:01:15 <UkoeHB> hello
+17:01:25 <selsta> hi
+17:01:26 <jberman[m]> howdy
+17:01:32 <xmr-ack[m]> hola
+17:01:33 <mj-xmr[m]> Bonjour
+17:02:17 <Rucknium[m]> Hi
+17:02:40 <cryptogrampy[m]> hi
+17:03:50 <UkoeHB> 2. updates, what is everyone working on?
+17:04:47 <UkoeHB> me: more seraphis stuff (I implemented binned reference sets, next up are the 16/2 jamtis address index discussion/possible implementation, then discretized fees)
+17:07:38 <mj-xmr[m]> a) I have made some progress with decoy sel. algo analysis and summarized both the results and the strategy here:
+17:07:38 <mj-xmr[m]> https://github.com/mj-xmr/monero-mrl-mj/tree/decoy/decoy
+17:07:38 <mj-xmr[m]> In short: We'll be performing statistical analysis with Rucknium and jberman and I'm preparing it from the technical level.
+17:07:38 <mj-xmr[m]> b) I had a great chat with ArticMine  and endor00 about the next (parallel) task of simulating the behavior of the system (fee and block size) in case of a sudden increase of transactions. I know how it all should work now.
+17:08:35 <Rucknium[m]> Working on estimating the effect (if any) of minexmr's increase in its pool fee from 1.0% to 1.1% on April 1st. The most obvious statistical model, to me, is a test for a structural break in the time series. Input about that is welcome. I've started to collect the data using neptune's SQL tables. 
+17:08:40 <Rucknium[m]> I think this research question maybe a bit touchy. I am going to calculate the statistical power of the test. If the test cannot detect a fall (or rise) in minexmr's share of blocks of less than 1-2%, then I will probably just share the results here rather than on Reddit since I think it is hard for laypeople to distinguish between the two statements "There was no effect" and "The data and circumstances were such that no effect
+17:08:40 <Rucknium[m]> could be detected".
+17:08:56 <jberman[m]> added support for view tags to the block explorer + monero-lws, and helped out with monero-python (both on adding support for view tags [ty plowsof ] and on helping patch a vulnerability reported by kayabaNerve  that allows a sender to get a recipient to blindly trust an arbitrary amount in a tx) 
+17:11:06 <UkoeHB> thanks guys
+17:11:22 <UkoeHB> 3. discuss larger jamtis address tags (and address indices)
+17:11:42 <UkoeHB> Does anyone have comments/questions about it (other than me)?
+17:12:01 <Rucknium[m]> Question: What is a MAC?
+17:12:28 <UkoeHB> I came up with an adjusted CBC (chained block cipher) mode for blowfish that seems like it will work for non-block-size-multiple ciphertexts.
+17:13:04 <Rucknium[m]> Also, is this related to the "probability of a collision" calculations you and I discussed a few months ago?
+17:13:36 <UkoeHB> Rucknium[m]: when encrypting something, you can add a small piece of data at the end. When decrypting, if you re-create that end piece (the MAC), then there is a very high chance that decryption succeeded (i.e. the deciphered text isn't gibberish).
+17:14:50 <UkoeHB> Typically MACs are like 16 bytes. In the case of jamtis address tags, the MAC just acts as a filter when deciphering (very similar to view tags).
+17:15:10 <UkoeHB> Since it acts as a filter, it can be small (1-2 bytes).
+17:15:50 <UkoeHB> If someone has a better name for the address tag MAC, I would be happy to accept it lol
+17:16:20 <UkoeHB> Rucknium[m]: re: probability of a collision, can you remind me what that was about?
+17:16:22 <kayabaNerve> jberman[m]: It was only for when it scans it itself, which likely wasn't happening, but definitely a crit patch :)
+17:16:34 <UkoeHB> oh, the seraphis squashed enote hash? this is different
+17:17:29 <kayabaNerve> Also, just to ensure my understanding is correct, MAC here is comparable to BTC's 6 character/4 byte Bech32 checksum, right?
+17:18:00 <UkoeHB> kayabaNerve: in practice it's just some zero bits appended to the plaintext, and then you check if those bits are zero after deciphering
+17:18:26 <kayabaNerve> I won't advocate for using a BCH code, as they're nifty yet literally no one bothers using them to detect where errors are and you're never supposed to auto correct anyways.
+17:18:58 <kayabaNerve> Yeah. Bech32 uses a constant of... 1? And then Bech32m uses a constant which doesn't allow malleability via 0 padding
+17:19:42 <kayabaNerve> So where is this being proposed as used?
+17:20:01 <UkoeHB> kayabaNerve: https://gist.github.com/tevador/50160d160d24cfc6c52ae02eb3d17024?permalink_comment_id=4144862#gistcomment-4144862
+17:20:06 <merope> Afaik MACs are not for error correction, but to just detect decryption errors or tampering. Without a MAC, someone could manipulate the cyphertext and change the result
+17:20:12 <kayabaNerve> Thanks
+17:20:49 <UkoeHB> if you scroll up, I made a comment on monday summarizing the situation
+17:21:05 <jberman[m]> @UkoeHB did you get to do more benchmarking/can you comment further on how it would impact scanning time? I'm not exactly clear on it from the comment/explanation. considering the MAC is larger, would we expect the increase in byte size to actually reduce scanning time?
+17:21:18 <UkoeHB> jberman[m]: I will work on that today
+17:23:34 <UkoeHB> increasing the size from 8 -> 18 will increase the blowfish ciphers from 1 to 3, but increasing the mac from 1 -> 2 bytes will reduce the cost of filter-failures by 1/256 (failures require at least one expensive EC op)
+17:24:01 <kayabaNerve> Thanks for the details. This all makes sense to me. There's definitely no use case for BCH here (I assumed this was for addresses, not understanding the distinction of addess tags, sorry)
+17:26:15 <UkoeHB> For today, the more important question is the address index size (7 bytes or 16 bytes).
+17:26:38 <UkoeHB> right now we have 8-byte address indices (typically split into 4 byte address index and 4 byte account index)
+17:29:38 <selsta> so increase from 8 to 16? or decrease to 7?
+17:29:51 <UkoeHB> yes
+17:30:08 <UkoeHB> the main goal of 16 bytes is robust random address generation
+17:30:09 <selsta> i would check first if 16 bytes are even practical RAM wise
+17:30:10 <jberman[m]> I like it. It does relate to collisions in that it enables you to randomly generate an address without worrying about a collision. Whereas today you either need to maintain state of provisioned subaddresses, or use integrated addresses. Maintaining state across wallets is not so simple in all circumstances and integrated addresses have a suite of downsides that have been discussed at length
+17:30:58 <selsta> ok, if you want to use it like jberman[m] says it might make sehse
+17:31:17 <UkoeHB> selsta: what do you mean by RAM? I would just use a uchar array (wallets can interpret the index as they want)
+17:32:00 <UkoeHB> 16-byte indices is equivalent to baking the integrated address piece into addresses (adding 8 bytes)
+17:33:39 <selsta> UkoeHB: i meant if someone generates all possible addresses, but that might not be necessary if someone wants to to just randomly generate addresses
+17:34:46 <UkoeHB> imo all future wallets should primarily use random address generation (only the 'account'/'grouping' bits would be controlled)
+17:36:05 <selsta> how would restore work in this case?
+17:36:42 <selsta> currently they are generated sequentially and during restore there is a lookahead
+17:37:03 <UkoeHB> selsta: you may want to read up on jamtis https://gist.github.com/tevador/50160d160d24cfc6c52ae02eb3d17024
+17:37:32 <selsta> yea, it's better if I stay out of this discussion lol
+17:37:33 <UkoeHB> addresses would have an 'address tag' (ciphered address index), and on-chain outputs would have encrypted address tags
+17:37:40 <jberman[m]> it avoids the need for a lookahead, allowing you to decrypt to know exactly which address was used
+17:37:42 <selsta> i'm not fully up to date on the proposal
+17:37:51 <UkoeHB> during scanning, you decrypt then decipher the address tag to get the index, then try to recreate the spend key
+17:38:26 <selsta> that's a nice improvement compared to the lookahead
+17:38:52 <UkoeHB> the address tag contains a mac so you don't spend a ton of time recreating test address keys
+17:39:01 <UkoeHB> recreating spend keys*
+17:39:48 <UkoeHB> the reason we are discussing a size change is because these address tags are stored on-chain (chain cost)
+17:42:25 <jberman[m]> worth pointing out that 10 bytes per output would probably be more significant if the idea to have all tx's use 16 outputs was implemented: https://github.com/monero-project/research-lab/issues/96
+17:43:57 <UkoeHB> suppose so
+17:44:54 <gingeropolous> to me it seems that encouraging users to use random addresses all the time (as opposed to address re-use) to prevent out-of-band associations is worth it (the blockchain cost), if the alternative is complex enough to lead to wallets not doing it
+17:45:49 <UkoeHB> well the question is if you can still do random addresses with much smaller indices (5 bytes in a 7-byte index that has a 2-byte account index)
+17:46:52 <gingeropolous> and im all for future-proofing when possible
+17:46:59 <jberman[m]> some wallets can't even protect it (e.g. you have a wallet on 1 machine, same seed wallet a different machine, and these 2 wallets don't communicate with each other e.g. you use GUI on desktop and same seed in a mobile wallet)
+17:51:31 <UkoeHB> There doesn’t seem to be any opposition in this meeting (if tevador were here, there might be more pushback). I will do performance tests comparing 7/1 vs 16/2 jamtis address tags. If 16/2 doesn’t have perf issues, then I will implement it fully. Then we can/should revisit this question in the future (or if anyone appears with objections).
+17:54:56 <UkoeHB> We are getting to the end of the meeting. Any last minute questions/comments on any topic?
+17:55:21 <cryptogrampy[m]> It's very nice for a point of sale view-only collection wallet to not know anything about which subaddress index the spend key/owner's wallet is on
+17:55:45 <cryptogrampy[m]> Dealing with this right now with HotBox :) Can only use integrated addresses for now.
+17:55:51 <selsta> I just wanted to talk about multisig audit shortly.
+17:56:15 <UkoeHB> cryptogrampy[m]: do you think random generation would solve that?
+17:56:22 <UkoeHB> selsta: ok
+17:56:26 <selsta> I don't think we have to audit multisig before the hardfork, but we definitely have to audit it before Haveno launches.
+17:57:16 <UkoeHB> No objection
+17:57:28 <selsta> The problem is that there is no writeup of the cryptography and I don't think UkoeHB is interested in writing it down.
+17:57:53 <selsta> Any ideas what / how we could solve that?
+17:59:11 <selsta> Without writeup the auditors will probably waste a lot of time and maybe misunderstand something.
+17:59:23 <UkoeHB> In other words, UkoeHB needs an intern lol
+17:59:42 <selsta> UkoeHB: i can understand that working on Seraphis is way more exciting lol
+18:00:18 <UkoeHB> It’s also a time commitment
+18:00:27 <cryptogrampy[m]> UkoeHB: For the HotShop usecase, I would want to generateRandomSubaddress() (outputs a fairly collision proof subaddress) to use for collecting payment.  The payment collection device uses a primary and view key and has no contact with the spend key wallet.   The spend key wallet currently has no idea that subaddress at index 100000000 was used at the end of the day, but it sounds like the address tags will help with this?
+18:01:16 <UkoeHB> cryptogrampy[m]: seems like it will help
+18:01:32 <selsta> maybe luigi1111 is bored and wants to do an updated multisig writeup
+18:01:38 <Rucknium[m]> Could coinstudent2048 help us?
+18:01:39 <UkoeHB> Or would* since nothing is guaranteed
+18:01:56 <jberman[m]> Was gonna tag coinstudent, also dangerousfreedom may be interested
+18:02:07 <selsta> I'm sure we could get funding for whoever wants to do this.
+18:02:54 <jberman[m]> <UkoeHB> "well the question is if you..." <- my math might be off here, but 50% probability of a collision is on the order of low billions of subaddresses generated? Hardening numbers to answer this would be nice, just gotta plug into the birthday problem
+18:03:07 <cryptogrampy[m]> UkoeHB: This was somewhat discussed in github issue on integrated address deprecation, but I think the address tags could be the last nail in the coffin needed to get rid of integrated addresses
+18:03:12 <selsta> Launching Haveno without audit could mean it's a matter of time until funds are stolen. At least with audit the chance is reduced.
+18:03:47 <Rucknium[m]> I think MAGIC Monero Fund could pitch in some money to help the audit as well. The committee would need to approve the funds, of course.
+18:04:22 <selsta> Rucknium[m]: I talked do sgp_ and he also suggested MAGIC, so that is something we can consider once we have a writeup of the cryptography.
+18:05:21 <Rucknium[m]> I mean, MAGIC could fund the writeup itself, too. However, MAGIC would have to KYC the recipient of the funds.
+18:07:00 <selsta> let's see if coinstudent2048[ or dangerousfreedom are interested first
+18:07:53 <mj-xmr[m]> This sounds good, also because of the KYC requirement. Audits are more official and formal than the usual development.
+18:08:27 <mj-xmr[m]> I mean KYC here won't hurt as much as it would for other efforts.
+18:10:19 <selsta> ok, that's it from my side
+18:10:40 <UkoeHB> Thanks selsta and thanks everyone for attending

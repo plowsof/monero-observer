@@ -1,0 +1,30 @@
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+{% if page.title %}
+<title>{{ site.title }} - {{ page.title }}</title>
+{% else %}
+<title>{{ site.title }}</title>
+{% endif %}
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+<meta name="application-name" content="{{ site.title }}">
+<meta name="theme-color" content="#ffffff">
+{% if page.description %}
+<meta name="description" content="{{ page.description }}">
+{% else %}
+<meta name="description" content="{{ site.description }}">
+{% endif %}
+{% if page.robots %}
+<meta name="robots" content="{{ page.robots }}">
+{% endif %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="twitter:image" content="{% if page.image %}{{ site.url }}/assets/img/stories/{{ page.image }}{% else %}{{ site.url }}{{ site.image }}{% endif %}">
+</head>

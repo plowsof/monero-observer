@@ -1,0 +1,52 @@
+<div id="messages">
+<h1>Community Messages {% assign total_messages = site.posts | where: "tag", "community" %}
+{% if total_messages.size > 4 %}
+<sup><a href="/tag/community">[{{ total_messages.size }}]</a></sup>
+{% endif %}
+</h1>
+<div class="wrap">
+{% assign pinned_messages = total_messages | where: "tag", "pinned" %}
+{% for post in pinned_messages %}
+<div class="pinned-message">
+<p>
+[ANN] {{ post.title | truncate: 55 }}
+</p>
+{% if post.link %}
+<p>
+<a href="{{ post.link }}">{{ post.meta }}</a>
+</p>
+{% else %}
+<p>
+{{ post.meta }}
+</p>
+{% endif %}
+</div>
+{% endfor %}
+{% assign normal_messages = site.posts | where: "tag", "community" %}
+
+{% assign timeframe = 604800 | times: 4 %}
+
+{% for post in normal_messages limit: 5 %}
+
+{% unless post.category contains "story" %}
+
+{% assign post_in_seconds = post.date | date: "%s" | plus: 0 %}
+{% assign recent_posts = "now" | date: "%s" | minus: timeframe  %}
+
+{% if post_in_seconds > recent_posts %}
+ 
+<div class="message">
+<p>
+{{ post.title | truncate: 55 }}
+</p>
+<p>
+<a href="{{ post.url }}" class="message-link">{{ post.author }}</a>
+</p>
+</div>
+{% endif %}
+
+{% endunless %}
+
+{% endfor %}
+</div>
+</div>

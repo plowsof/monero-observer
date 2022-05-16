@@ -1,0 +1,533 @@
+body {
+	background: var(--color-scheme-background);
+  color: var(--color-scheme-text-color);
+	font-size: 21px;
+	font-family: $font;
+	padding: 15px;
+	@media (min-width: $break-sm) {
+		font-size: 26px;
+		padding: 25px;
+	}
+	#logo, h1, h2, p {
+		font-family: $font-bold;
+	}
+	a {
+		color: $link;
+	}
+	.right {
+		float: right;
+	}
+	sup {
+    font-family: $font;
+    font-size: 26px;
+	}
+	header {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		p {
+			align-self: center;
+			font-family: $font;
+		}
+	}
+	.content {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 75px;
+		@media (min-width: $break-sm) {
+			grid-template-columns: 2fr 3fr;	
+		}
+		#graphic {
+			grid-column: 1;
+			grid-row: 3;
+			margin: 25px 0;
+			justify-self: center;
+			max-width: 100%;
+			@media (min-width: $break-sm) {
+				grid-column: 1;
+				grid-row: 2;
+				justify-self: left;
+			}
+		}
+		#blitz, #ta {
+			margin: 50px 0;
+			text-align: center;
+			@media (min-width: $break-sm) {
+				margin: 25px 0;
+				text-align: left;
+			}
+			a {
+				text-align: left;
+			}
+		}
+		#community {
+			display: grid;
+			#all-messages {
+				h1 {
+					margin: 25px 0;
+				}
+				.wrap {
+					display: grid;
+					grid-template-columns: 1fr;
+					margin: 50px 0;
+					@media (min-width: 860px) {
+						grid-template-columns: 1fr 1fr;	
+					}
+					@media (min-width: 1280px) {
+						grid-template-columns: repeat(3, 1fr);	
+					}
+					@media (min-width: 1660px) {
+						grid-template-columns: repeat(4, 1fr);	
+					}
+					.message {
+						margin: 2px;
+						border: 2px solid #dee0e3;
+						display: grid;
+						grid-template-rows: 1fr 50px;
+						padding: 30px 20px;
+						@media (min-width: $break-sm) {
+							min-height: 200px;
+						}
+						.message-link {
+							float: left;
+						}
+						@media (min-width: $break-lg) {
+							min-width: 400px;
+						}
+					}
+					p:last-of-type {
+						align-self: end;
+						font-family: $font;
+					}
+					.pinned-message {
+						min-height: 200px;
+						background: #dee0e3;
+						color: #2d3748;
+						display: grid;
+						grid-template-rows: 1fr 50px;
+						padding: 30px 20px;
+						margin: 2px;
+						p, p a {
+							font-family: $font-bold;
+						}
+						@media (min-width: $break-lg) {
+							min-width: 400px;
+						}
+					}
+				}
+			}
+			#messages {
+				margin-top: 25px;
+				.wrap {
+					display: grid;
+					grid-template-columns: 1fr;
+					margin-top: 40px;
+					@media (min-width: $break-lg) {
+						grid-template-columns: 1fr 1fr;	
+					}
+					.message {
+						min-width: 300px;
+						min-height: 150px;
+						margin: 2px;
+						border: 1px solid #dee0e3;
+						display: grid;
+						grid-template-rows: 1fr 50px;
+						padding: 30px 20px;
+						margin: 2px;
+						.message-link {
+							float: left;
+						}
+					}
+					p {
+						font-family: $font-bold;
+					}
+					p:last-of-type {
+						align-self: end;
+						font-family: $font;
+					}
+					.pinned-message {
+						min-height: 150px;
+						background: #dee0e3;
+						color: #2d3748;
+						display: grid;
+						grid-template-rows: 1fr 50px;
+						padding: 30px 20px;
+						margin: 2px;
+						p, p a {
+							font-family: $font-bold;
+						}
+					}
+				}
+				p {
+					font-size: 20px;
+				}
+				h1 {
+					margin-bottom: 25px;
+				}
+			}
+		}
+		#meetings {
+			display: grid;
+			#all-meetings {
+				h1 {
+					margin: 25px 0;
+				}
+				.wrap {
+					display: grid;
+					grid-template-columns: 1fr;
+					margin: 50px 0;
+					@media (min-width: 860px) {
+						grid-template-columns: 1fr 1fr;	
+					}
+					@media (min-width: 1280px) {
+						grid-template-columns: repeat(3, 1fr);	
+					}
+					@media (min-width: 1660px) {
+						grid-template-columns: repeat(4, 1fr);	
+					}
+					.meeting {
+						margin: 2px;
+						border: 2px solid #dee0e3;
+						display: grid;
+						grid-template-rows: 1fr 50px;
+						padding: 30px 20px;
+						@media (min-width: $break-sm) {
+							min-height: 200px;
+						}
+						.message-link {
+							float: left;
+						}
+						@media (min-width: $break-lg) {
+							min-width: 400px;
+						}
+					}
+					p:last-of-type {
+						align-self: end;
+						font-family: $font;
+					}
+					.pinned-meeting {
+						min-height: 200px;
+						background: #dee0e3;
+						color: #2d3748;
+						display: grid;
+						grid-template-rows: 1fr 50px;
+						padding: 30px 20px;
+						margin: 2px;
+						p, p a {
+							font-family: $font-bold;
+						}
+						@media (min-width: $break-lg) {
+							min-width: 400px;
+						}
+					}
+				}
+			}
+			#meetings {
+				margin-top: 25px;
+				.wrap {
+					display: grid;
+					grid-template-columns: 1fr;
+					margin-top: 40px;
+					@media (min-width: $break-lg) {
+						grid-template-columns: 1fr 1fr;	
+					}
+					.meeting {
+						min-width: 300px;
+						min-height: 150px;
+						margin: 2px;
+						border: 1px solid #dee0e3;
+						display: grid;
+						grid-template-rows: 1fr 50px;
+						padding: 30px 20px;
+						margin: 2px;
+						.message-link {
+							float: left;
+						}
+					}
+					p {
+						font-family: $font-bold;
+					}
+					p:last-of-type {
+						align-self: end;
+						font-family: $font;
+					}
+					.pinned-meeting {
+						min-height: 150px;
+						background: #dee0e3;
+						color: #2d3748;
+						display: grid;
+						grid-template-rows: 1fr 50px;
+						padding: 30px 20px;
+						margin: 2px;
+						p, p a {
+							font-family: $font-bold;
+						}
+					}
+				}
+				p {
+					font-size: 20px;
+				}
+				h1 {
+					margin-bottom: 25px;
+				}
+			}
+		}
+		#stories {
+			grid-column: 1;
+			grid-row: 1;
+			@media (min-width: $break-sm) {
+				grid-column: 2;
+				grid-row: 1;
+			}
+			margin: 25px 0;
+			.pagination {
+				display: -webkit-inline-box;
+				float: right;
+				li {
+					margin: 0 8px;
+				}
+			}
+			h1 {
+				text-align: right;
+				margin-bottom: 25px;
+			}
+			.story {
+				text-align: right;
+				margin: 5px 0;
+				padding: 10px 0;
+			}
+		}
+	}
+	
+	footer {
+		text-align: right;
+		margin-top: 25px;
+		.notes {
+			float: left;
+	    font-family: $font;
+		}
+	}
+}
+.periodicals {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 10px;
+  grid-gap: 10px;
+  @media (min-width: $break-lg) {
+		grid-template-columns: 1fr 1fr;
+	}
+  #blitz {
+  	grid-column: 1;
+  	grid-row: 1;
+  }
+  #ta {
+  	grid-row: 3;
+  	grid-column: 1;
+  	img {
+  		display: block;
+  		border: 1px solid;
+  	}
+  	@media (min-width: $break-lg) {
+			grid-column: 2;
+  		grid-row: 1;
+			justify-self: left;
+		}
+  }
+}
+.letter {
+  background: slategray;
+  color: #111;
+  padding: 10px;
+}
+#resources {
+  display: grid;
+  grid-template-columns: 1fr;
+  @media (min-width: $break-lg) {
+  	grid-template-columns: 1fr 1fr;
+  }
+}
+.alpha { 
+	padding: 0 !important;	
+	flex-flow: wrap;
+	li {
+	  margin: 0 10px;
+	}
+}
+details pre {
+  font-size: 10px;
+  @media (min-width: $break-sm) {
+    font-size: 16px;
+  }
+  @media (min-width: $break-lg) {
+    font-size: 20px;
+  }
+  @media (min-width: $break-xl) {
+    font-size: 26px;
+  }
+}
+
+.qr {
+  color: orangered;
+  ul li {
+    list-style: none !important;	
+  }
+}
+.event {
+  text-align: center;
+  grid-template-rows: auto !important;
+  min-height: auto !important;
+}
+
+#community #calendar .pinned-meeting.event {
+	min-height: 200px;
+	background: #dee0e3;
+	color: #2d3748;
+	display: grid;
+	grid-template-rows: 1fr 50px;
+	padding: 30px 20px;
+	margin: 2px;
+	@media (min-width: $break-lg) {
+	 min-width: 400px;
+	}
+}
+#community #calendar .meeting.event {
+	margin: 2px;
+	border: 2px solid #dee0e3;
+	display: grid;
+	grid-template-rows: 1fr 50px;
+	padding: 30px 20px;
+	@media (min-width: $break-lg) {
+	 min-width: 400px;
+	}
+}
+#calendar {
+  margin: 40px 0 25px 0;
+	h1 {
+		margin-bottom: 25px;
+	}
+}
+.stats {
+    color: silver;
+    text-align: right;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 0.8em;
+    border-bottom: 1px solid silver;
+    border-top: 1px solid silver;
+		
+		// Menu
+		@keyframes glowing {
+      0% {
+        color: orangered;
+      }
+      50% {
+        color: orange;
+      }
+      100% {
+        color: orangered;
+      }
+    }
+		label {
+			cursor: pointer;
+			animation: glowing 1300ms infinite;
+			@media (min-width: $break-sm) {
+				float: left;
+				margin-right: 15px;
+			}
+		}
+		#menu-toggle {
+			display: none;
+			-webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+		}
+		#menu {
+			display: none;
+			-webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+		}
+		#menu-toggle:checked + #menu {
+			display: grid;
+			grid-template-columns: 1fr;
+			padding: 5px;
+			margin-top: 5px;
+			
+			@media (min-width: $break-sm) {
+				grid-template-columns: repeat(2, 1fr);	
+			}
+			@media (min-width: $break-lg) {
+				grid-template-columns: repeat(4, 1fr);	
+			}
+			li {
+				text-align: left;
+			}
+			.menu-stats li {
+				text-align: right;
+			}
+			.new {
+				animation: glowing 1300ms infinite;
+			}
+		}
+		
+    #site-date {
+    	@media (min-width: $break-sm) {
+    		float: left;
+  	 	}
+    }
+    span {
+    	display: flex;
+    	@media (min-width: $break-sm) {
+    		display: initial;
+  	 	}
+   	}
+   	@media (min-width: $break-sm) {
+    .stats-tpd {
+		display: none;
+    }
+    .stats-ttx {
+		display: none;
+    }
+   	}
+    @media (min-width: $break-lg) {
+    	font-size: 0.85em;
+    	.stats-tpd {
+    		display: initial;
+    	}
+    	.stats-ttx {
+    		display: initial;
+    	}
+    }
+}
+
+
+.content-logs {
+	display: grid;
+	grid-template-columns: 1fr;
+	#all-logs h1 {
+		margin: 25px 0;
+	}
+	.wrap {
+		display: grid;
+		grid-template-columns: 1fr;
+		.log {
+			border: 1px solid silver;
+			padding: 20px;
+			margin-bottom: 5px;
+			.meeting-date {
+				color: silver;
+				display: block;
+				@media (min-width: $break-sm) {
+					display: inline-block;
+				}
+			}
+			.meeting-links {
+				display: block;
+				@media (min-width: $break-sm) {
+					float: right;
+					display: inline-block;
+				}
+			}
+		}
+	}
+}

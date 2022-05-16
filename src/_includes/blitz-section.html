@@ -1,0 +1,27 @@
+<div class="periodicals">
+
+{% assign blitz_stories = site.posts | where: "tags", "blitz" %}
+{% for post in blitz_stories limit: 1 %}
+<div id="blitz">
+<h1>Monthly Blitz Reports {% assign blitz_issues = site.posts | where: "tags", "blitz" %}
+<sup><a href="/tag/blitz">[{{ blitz_issues.size }}]</a></sup>
+</h1>
+<a href="{{ post.url }}">
+<img src="/assets/img/blitz/{{ post.image }}" id="graphic" alt="banner"/>
+</a>
+</div>
+{% endfor %}
+
+{% assign ta_stories = site.posts | where: "tags", "analysis" %}
+<div id="ta">
+<h1>Weekly XMR TA Reports {% assign ta_issues = site.posts | where: "tags", "analysis" %}
+<sup><a href="/tag/analysis">[{{ ta_issues.size }}]</a></sup>
+</h1>
+{% for post in ta_stories limit: 3 %}
+<a href="{{ post.url }}">
+<img src="/assets/img/stories/{{ post.image }}" id="graphic" alt="xmr-graph"/>
+</a>
+{% endfor %}
+</div>
+
+</div>

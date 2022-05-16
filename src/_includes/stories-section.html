@@ -1,0 +1,30 @@
+<section id="stories">
+<h1>
+Latest Stories 
+<sup>
+<a href="/stories">
+{% assign total_stories = site.posts | where: "category", "story" %}
+[{{ total_stories.size }}]
+</a>
+</sup>
+</h1>
+{% for post in total_stories limit: 8 %}
+<div class="story">
+<span>{% if post.last_modified_at %}
+{{ post.date | date: "%-d %b %Y" }} | Updated {{ post.last_modified_at | date: "%-d %b %Y" }}
+{% unless post.tags.size == 0 %}
+<a href="/tag/{{ post.tags[0] }}" class="tag">[{{ post.tags[0] }}]</a> 
+{% endunless %}
+{% else %}
+{{ post.date | date: "%-d %b %Y" }}
+{% unless post.tags.size == 0 %}
+<a href="/tag/{{ post.tags[0] }}" class="tag">[{{ post.tags[0] }}]</a> 
+{% endunless %}
+{% endif %}</span>
+<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+</div>
+{% endfor %}
+<a href="/stories" class="right">
+[..]
+</a>
+</section>

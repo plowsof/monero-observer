@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-US">
+{% include head.html %}
+<body>
+{% include header.html %}
+<div class="post-content">
+<article>
+<span>
+{% if page.last_modified_at %}
+{{ page.date | date: "%-d %b %Y" }} | Updated {{ page.last_modified_at | date: "%-d %b %Y" }}
+{% else %}
+{{ page.date | date: "%-d %b %Y" }}
+{% endif %}
+{% unless page.tags.size == 0 %}
+<a href="/tag/{{ page.tags[0] }}" class="tag">[{{ page.tags[0] }}]</a> 
+{% if page.tags.size > 1 %}
+<a href="/tag/{{ page.tags[1] }}" class="tag">[{{ page.tags[1] }}]</a> 
+{% endif %}
+{% endunless %}
+</span>
+<h1>{{ page.title }}</h1>
+{% if page.image %}
+{% if page.tags contains "blitz" %}
+<img src="/assets/img/blitz/{{ page.image }}" class="img"/> 
+{% else %}
+<img src="/assets/img/stories/{{ page.image }}" class="img"/> 
+{% endif %}
+{% endif %}
+{{ page.content }}
+{% if page.tag == "community" %}
+<p>Submitted by: 
+<strong>{{ page.author }}</strong>
+</p>
+<p>
+{% if page.link %}
+<p>Contact:
+<a href="{{ page.link }}" target="_blank" rel="nofollow">{{ page.link }}</a>
+</p>
+{% endif %}
+<hr>
+<h2>Note:</h2>
+<p><em>This is a free <a href="/tag/community">community message</a> submitted by <strong>{{ page.author }}</strong>.</p>
+<p>Read the <a href="/monero-observer-community-messages"><strong>service announcement</strong></a> for more info.</em></p>
+<p><em>Always DYOR and make use of reputable escrow services. I do not/can not verify anything. <a href="/about">Report any suspicious messages.</a></em></p>
+{% endif %}
+</article>
+</div>
+{% include footer.html %}
+</body>
+</html>

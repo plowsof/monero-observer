@@ -1,0 +1,815 @@
+- hr: 2.79
+  hr-c: "&#9660; 7.6"
+  p2p: 5.7
+  p2p-c: "&#9650; 7.5"
+  tpd: 39
+  tpd-c: "&#9650; 11"
+  mc: 2.7
+  ttx: "20.6K"
+  btc: 0.005029
+  date: "14 May 2022 SAT"
+  published: "2022-05-14"
+  
+- hr: 3.02
+  hr-c: "&#9650; 5.6"
+  p2p: 5.3
+  p2p-c: "&#9660; 5.3"
+  tpd: 35
+  tpd-c: "&#9660; 14"
+  mc: 2.6
+  ttx: "24.9K"
+  btc: 0.004850
+  date: "13 May 2022 FRI"
+  published: "2022-05-13"
+
+- hr: 2.86
+  hr-c: "&#9650; 5.5"
+  p2p: 5.6
+  p2p-c: "&#9660; 3.4"
+  tpd: 41
+  tpd-c: "&#9660; 4.6"
+  mc: 2.4
+  ttx: "30.0K"
+  btc: 0.004707
+  date: "12 May 2022 THU"
+  published: "2022-05-12"
+
+- hr: 2.71
+  hr-c: "&#9660; 3.9"
+  p2p: 5.8
+  p2p-c: "&#9650; 5.4"
+  tpd: 43
+  tpd-c: "0"
+  mc: 2.6
+  ttx: "29.8K"
+  btc: 0.005010
+  date: "11 May 2022 WED"
+  published: "2022-05-11"
+
+- hr: 2.82
+  hr-c: "&#9660; 7"
+  p2p: 5.5
+  p2p-c: "&#9650; 14"
+  tpd: 43
+  tpd-c: "&#9650; 2"
+  mc: 2.7
+  ttx: "30.1K"
+  btc: 0.005053
+  date: "10 May 2022 TUE"
+  published: "2022-05-10"
+
+- hr: 3.04
+  hr-c: "&#9650; 3.4"
+  p2p: 4.8
+  p2p-c: "&#9650; 2"
+  tpd: 42
+  tpd-c: "0"
+  mc: 3.3
+  ttx: "23.5K"
+  btc: 0.005827
+  date: "9 May 2022 MON"
+  published: "2022-05-09"
+
+- hr: 2.94
+  hr-c: "&#9650; 2"
+  p2p: 4.7
+  p2p-c: "&#9660; 2"
+  tpd: 42
+  tpd-c: "&#9650; 7"
+  mc: 3.9
+  ttx: "23.5K"
+  btc: 0.006349
+  date: "8 May 2022 SUN"
+  published: "2022-05-08"
+
+- hr: 2.88
+  hr-c: "&#9650; 2"
+  p2p: 4.8
+  p2p-c: "&#9660; 11"
+  tpd: 39
+  tpd-c: "&#9660; 2"
+  mc: 3.7
+  ttx: "23.1K"
+  btc: 0.005781
+  date: "7 May 2022 SAT"
+  published: "2022-05-07"
+
+- hr: 2.82
+  hr-c: "&#9660; 8"
+  p2p: 5.4
+  p2p-c: "&#9650; 17"
+  tpd: 40
+  tpd-c: "&#9650; 5"
+  mc: 3.8
+  ttx: "26.8K"
+  btc: 0.005888
+  date: "6 May 2022 FRI"
+  published: "2022-05-06"
+
+- hr: 3.07
+  hr-c: "&#9650; 1.6"
+  p2p: 4.6
+  p2p-c: "0"
+  tpd: 38
+  tpd-c: "&#9650; 2.7"
+  mc: 3.7
+  ttx: "28.4K"
+  btc: 0.005685
+  date: "5 May 2022 THU"
+  published: "2022-05-05"
+
+- hr: 3.02
+  hr-c: "&#9650; 0.3"
+  p2p: 4.6
+  p2p-c: "&#9650; 12"
+  tpd: 37
+  tpd-c: "0"
+  mc: 3.9
+  ttx: "29.6K"
+  btc: 0.005756
+  date: "4 May 2022 WED"
+  published: "2022-05-04"
+
+- hr: 3.01
+  hr-c: "&#9650; 3.8"
+  p2p: 4.1
+  p2p-c: "&#9660; 16"
+  tpd: 37
+  tpd-c: "&#9660; 9.7"
+  mc: 3.8
+  ttx: "30.1K"
+  btc: 0.005787
+  date: "3 May 2022 TUE"
+  published: "2022-05-03"
+
+- hr: 2.90
+  hr-c: "&#9650; 1.7"
+  p2p: 4.9
+  p2p-c: "0"
+  tpd: 41
+  tpd-c: "&#9650; 2.5"
+  mc: 3.6
+  ttx: "27.7K"
+  btc: 0.005201
+  date: "2 May 2022 MON"
+  published: "2022-05-02"
+
+- hr: 2.85
+  hr-c: "&#9660; 8"
+  p2p: 4.9
+  p2p-c: "&#9650; 4"
+  tpd: 40
+  tpd-c: "&#9650; 11"
+  mc: 3.8
+  ttx: "24.7K"
+  btc: 0.005531
+  date: "1 May 2022 SUN"
+  published: "2022-05-01"
+
+- hr: 3.11
+  hr-c: "&#9660; 2"
+  p2p: 4.7
+  p2p-c: "&#9650; 14"
+  tpd: 36
+  tpd-c: "0"
+  mc: 4.0
+  ttx: "25.1K"
+  btc: 0.005833
+  date: "30 Apr 2022 SAT"
+  published: "2022-04-30"
+
+- hr: 3.18
+  hr-c: "&#9650; 16"
+  p2p: 4.1
+  p2p-c: "&#9660; 25"
+  tpd: 36
+  tpd-c: "&#9660; 5.5"
+  mc: 3.9
+  ttx: "28.1K"
+  btc: 0.005650
+  date: "29 Apr 2022 FRI"
+  published: "2022-04-29"
+
+- hr: 2.74
+  hr-c: "&#9660; 6.8"
+  p2p: 5.5
+  p2p-c: "&#9650; 7.8"
+  tpd: 38
+  tpd-c: "&#9650; 3"
+  mc: 4.1
+  ttx: "28.3K"
+  btc: 0.005655
+  date: "28 Apr 2022 THU"
+  published: "2022-04-28"
+
+- hr: 2.94
+  hr-c: "&#9660; 3"
+  p2p: 5.1
+  p2p-c: "&#9660; 4"
+  tpd: 37
+  tpd-c: "&#9650; 9"
+  mc: 4.1
+  ttx: "24.5K"
+  btc: 0.005758
+  date: "27 Apr 2022 WED"
+  published: "2022-04-27"
+
+- hr: 3.04
+  hr-c: "&#9660; 0.3"
+  p2p: 5.3
+  p2p-c: "&#9650; 18"
+  tpd: 34
+  tpd-c: "&#9660; 0.7"
+  mc: 4.3
+  ttx: "22.5K"
+  btc: 0.006262
+  date: "26 Apr 2022 TUE"
+  published: "2022-04-26"
+
+- hr: 3.05
+  hr-c: "&#9660; 3.5"
+  p2p: 4.5
+  p2p-c: "&#9650; 4.5"
+  tpd: 37
+  tpd-c: "&#9650; 5.5"
+  mc: 4.6
+  ttx: "22.1K"
+  btc: 0.006321
+  date: "25 Apr 2022 MON"
+  published: "2022-04-25"
+
+- hr: 3.16
+  hr-c: "&#9660; 2.5"
+  p2p: 4.3
+  p2p-c: "&#9650; 2"
+  tpd: 35
+  tpd-c: "&#9650; 3"
+  mc: 4.6
+  ttx: "19.8K"
+  btc: 0.006418
+  date: "24 Apr 2022 SUN"
+  published: "2022-04-24"
+
+- hr: 3.24
+  hr-c: "&#9650; 4"
+  p2p: 4.2
+  p2p-c: "&#9660; 12"
+  tpd: 34
+  tpd-c: "&#9660; 8"
+  mc: 4.9
+  ttx: "19.9K"
+  btc: 0.006788
+  date: "23 Apr 2022 SAT"
+  published: "2022-04-23"
+
+- hr: 3.11
+  hr-c: "&#9650; 2"
+  p2p: 4.8
+  p2p-c: "&#9650; 2"
+  tpd: 37
+  tpd-c: "&#9660; 2"
+  mc: 4.8
+  ttx: "22.6K"
+  btc: 0.006743
+  date: "22 Apr 2022 FRI"
+  published: "2022-04-22"
+
+- hr: 3.05
+  hr-c: "&#9660; 1"
+  p2p: 4.7
+  p2p-c: "&#9650; 7"
+  tpd: 38
+  tpd-c: "0"
+  mc: 5.1
+  ttx: "25.0K"
+  btc: 0.00702
+  date: "21 Apr 2022 THU"
+  published: "2022-04-21"
+
+- hr: 3.09
+  hr-c: "&#9660; 8"
+  p2p: 4.4
+  p2p-c: "0"
+  tpd: 38
+  tpd-c: "&#9650; 8"
+  mc: 4.8
+  ttx: "21.9K"
+  btc: 0.006453
+  date: "20 Apr 2022 WED"
+  published: "2022-04-20"
+
+- hr: 3.36
+  hr-c: "&#9650; 6"
+  p2p: 4.4
+  p2p-c: "&#9650; 7"
+  tpd: 35
+  tpd-c: "&#9650; 3"
+  mc: 4.6
+  ttx: "22.5K"
+  btc: 0.006134
+  date: "19 Apr 2022 TUE"
+  published: "2022-04-19"
+
+- hr: 3.16
+  hr-c: "&#9660; 1"
+  p2p: 4.1
+  p2p-c: "&#9660; 12"
+  tpd: 34
+  tpd-c: "&#9660; 2"
+  mc: 4.7
+  ttx: "21.5K"
+  btc: 0.00642
+  date: "18 Apr 2022 MON"
+  published: "2022-04-18"
+
+- hr: 3.19
+  hr-c: "&#9660; 2"
+  p2p: 4.7
+  p2p-c: "&#9650; 5"
+  tpd: 35
+  tpd-c: "0"
+  mc: 4.3
+  ttx: "15.6K"
+  btc: 0.005962
+  date: "17 Apr 2022 SUN"
+  published: "2022-04-17"
+
+- hr: 3.26
+  hr-c: "&#9650; 11"
+  p2p: 4.5
+  p2p-c: "0"
+  tpd: 35
+  tpd-c: "&#9660; 2"
+  mc: 4.2
+  ttx: "14.1K"
+  btc: 0.005828
+  date: "16 Apr 2022 SAT"
+  published: "2022-04-16"
+
+- hr: 2.93
+  hr-c: "&#9650; 3"
+  p2p: 4.5
+  p2p-c: "&#9660; 2"
+  tpd: 36
+  tpd-c: "&#9660; 4"
+  mc: 4.3
+  ttx: "19.0K"
+  btc: 0.005930
+  date: "15 Apr 2022 FRI"
+  published: "2022-04-15"
+
+- hr: 2.84
+  hr-c: "&#9660; 5"
+  p2p: 4.6
+  p2p-c: "&#9650; 2"
+  tpd: 38
+  tpd-c: "&#9650; 5"
+  mc: 4.1
+  ttx: "16.9K"
+  btc: 0.005770
+  date: "14 Apr 2022 THU"
+  published: "2022-04-14"
+
+- hr: 3.00
+  hr-c: "&#9650; 0.7"
+  p2p: 4.5
+  p2p-c: "&#9660; 4"
+  tpd: 36
+  tpd-c: "&#9650; 6"
+  mc: 4.2
+  ttx: "19.4K"
+  btc: 0.005650
+  date: "13 Apr 2022 WED"
+  published: "2022-04-13"
+
+- hr: 2.98
+  hr-c: "&#9650; 0.4"
+  p2p: 4.7
+  p2p-c: "&#9650; 4"
+  tpd: 34
+  tpd-c: "0"
+  mc: 4.2
+  ttx: "25.1K"
+  btc: 0.005960
+  date: "12 Apr 2022 TUE"
+  published: "2022-04-12"
+
+- hr: 2.97
+  hr-c: "&#9660; 1"
+  p2p: 4.5
+  p2p-c: "&#9650; 5"
+  tpd: 34
+  tpd-c: "0"
+  mc: 4.0
+  ttx: "23.2K"
+  btc: 0.005718
+  date: "11 Apr 2022 MON"
+  published: "2022-04-11"
+
+- hr: 3.01
+  hr-c: "&#9650; 4"
+  p2p: 4.3
+  p2p-c: "&#9660; 7"
+  tpd: 34
+  tpd-c: "&#9660; 6"
+  mc: 4.3
+  ttx: "21.0K"
+  btc: 0.005600
+  date: "10 Apr 2022 SUN"
+  published: "2022-04-10"
+
+- hr: 2.88
+  hr-c: "&#9660; 1"
+  p2p: 4.7
+  p2p-c: "&#9650; 9"
+  tpd: 36
+  tpd-c: "&#9660; 3"
+  mc: 4.3
+  ttx: "20.9K"
+  btc: 0.005605
+  date: "9 Apr 2022 SAT"
+  published: "2022-04-09"
+
+- hr: 2.92
+  hr-c: "&#9660; 2"
+  p2p: 4.3
+  p2p-c: "&#9660; 6"
+  tpd: 37
+  tpd-c: "0"
+  mc: 3.9
+  ttx: "19.6K"
+  btc: 0.005125
+  date: "8 Apr 2022 FRI"
+  published: "2022-04-08"
+
+- hr: 2.99
+  hr-c: "&#9650; 3"
+  p2p: 4.6
+  p2p-c: "&#9650; 2"
+  tpd: 37
+  tpd-c: "&#9660; 4"
+  mc: 4.0
+  ttx: "22.9K"
+  btc: 0.005175
+  date: "7 Apr 2022 THU"
+  published: "2022-04-07"
+
+- hr: 2.90
+  hr-c: "&#9660; 2"
+  p2p: 4.5
+  p2p-c: "&#9660; 10"
+  tpd: 39
+  tpd-c: "&#9650; 4"
+  mc: 3.9
+  ttx: "23.4K"
+  btc: 0.004958
+  date: "6 Apr 2022 WED"
+  published: "2022-04-06"
+
+- hr: 2.98
+  hr-c: "&#9660; 2"
+  p2p: 5.0
+  p2p-c: "&#9650; 19"
+  tpd: 38
+  tpd-c: "&#9650; 8"
+  mc: 4.0
+  ttx: "23.6K"
+  btc: 0.004825
+  date: "5 Apr 2022 TUE"
+  published: "2022-04-05"
+
+- hr: 3.05
+  hr-c: "&#9650; 5"
+  p2p: 4.2
+  p2p-c: "&#9660; 4"
+  tpd: 35
+  tpd-c: "&#9660; 5"
+  mc: 4.0
+  ttx: "24.9K"
+  btc: 0.004755
+  date: "4 Apr 2022 MON"
+  published: "2022-04-04"
+
+- hr: 2.91
+  hr-c: "&#9650; 1"
+  p2p: 4.4
+  p2p-c: "&#9660; 11"
+  tpd: 37
+  tpd-c: "0"
+  mc: 3.9
+  ttx: "22.1K"
+  btc: 0.004678
+  date: "3 Apr 2022 SUN"
+  published: "2022-04-03"
+
+- hr: 2.89
+  hr-c: "&#9650; 3"
+  p2p: 5.0
+  p2p-c: "&#9650; 2"
+  tpd: 37
+  tpd-c: "&#9660; 2"
+  mc: 3.8
+  ttx: "21.5K"
+  btc: 0.004650
+  date: "2 Apr 2022 SAT"
+  published: "2022-04-02"
+
+- hr: 2.79
+  hr-c: "&#9660; 2"
+  p2p: 4.9
+  p2p-c: "0"
+  tpd: 38
+  tpd-c: "0"
+  mc: 3.9
+  ttx: "24.1K"
+  btc: 0.004707
+  date: "1 Apr 2022 FRI"
+  published: "2022-04-01"
+
+- hr: 2.86
+  hr-c: "&#9650; 10"
+  p2p: 4.9
+  p2p-c: "&#9650; 6"
+  tpd: 38
+  tpd-c: "0"
+  mc: 3.8
+  ttx: "25.4K"
+  btc: 0.004658
+  date: "31 Mar 2022 THU"
+  published: "2022-03-31"
+
+- hr: 2.59
+  hr-c: "&#9660; 10"
+  p2p: 4.6
+  p2p-c: "&#9650; 9"
+  tpd: 38
+  tpd-c: "0"
+  mc: 4.0
+  ttx: "25.5K"
+  btc: 0.004710
+  date: "30 Mar 2022 WED"
+  published: "2022-03-30"
+
+- hr: 2.87
+  hr-c: "&#9660; 8"
+  p2p: 4.2
+  p2p-c: "&#9650; 10"
+  tpd: 38
+  tpd-c: "&#9650; 5"
+  mc: 3.9
+  ttx: "25.5K"
+  btc: 0.004629
+  date: "29 Mar 2022 TUE"
+  published: "2022-03-29"
+
+- hr: 3.12
+  hr-c: "&#9650; 2"
+  p2p: 3.8
+  p2p-c: "&#9660; 9"
+  tpd: 36
+  tpd-c: "&#9660; 3"
+  mc: 3.9
+  ttx: "23.9K"
+  btc: 0.004565
+  date: "28 Mar 2022 MON"
+  published: "2022-03-28"
+
+- hr: 3.05
+  hr-c: "&#9650; 10"
+  p2p: 4.2
+  p2p-c: "&#9650; 2"
+  tpd: 37
+  tpd-c: "&#9660; 5"
+  mc: 3.8
+  ttx: "18.1K"
+  btc: 0.004605
+  date: "27 Mar 2022 SUN"
+  published: "2022-03-27"
+
+- hr: 2.77
+  hr-c: "&#9660; 10"
+  p2p: 4.1
+  p2p-c: "&#9660; 2"
+  tpd: 39
+  tpd-c: "&#9650; 15"
+  mc: 3.7
+  ttx: "17.3K"
+  btc: 0.004661
+  date: "26 Mar 2022 SAT"
+  published: "2022-03-26"
+
+- hr: 3.07
+  hr-c: "&#9650; 4.8"
+  p2p: 4.2
+  p2p-c: "&#9660; 4.5"
+  tpd: 34
+  tpd-c: "&#9660; 5"
+  mc: 3.6
+  ttx: "22.7K"
+  btc: 0.004505
+  date: "25 Mar 2022 FRI"
+  published: "2022-03-25"
+
+- hr: 2.93
+  hr-c: "&#9650; 2.5"
+  p2p: 4.4
+  p2p-c: "&#9650; 7.3"
+  tpd: 36
+  tpd-c: "&#9660; 4"
+  mc: 3.7
+  ttx: "23.7K"
+  btc: 0.004616
+  date: "24 Mar 2022 THU"
+  published: "2022-03-24"
+
+- hr: 2.86
+  hr-c: "&#9650; 6"
+  p2p: 4.1
+  p2p-c: "&#9650; 5"
+  tpd: 38
+  tpd-c: "&#9650; 2"
+  mc: 3.5
+  ttx: "22.0K"
+  btc: 0.004597
+  date: "23 Mar 2022 WED"
+  published: "2022-03-23"
+
+- hr: 2.69
+  hr-c: "&#9650; 4"
+  p2p: 3.9
+  p2p-c: "&#9660; 2"
+  tpd: 37
+  tpd-c: "&#9650; 5"
+  mc: 3.5
+  ttx: "23.4K"
+  btc: 0.004588
+  date: "22 Mar 2022 TUE"
+  published: "2022-03-22"
+
+- hr: 2.81
+  hr-c: "&#9660; 8.5"
+  p2p: 4.0
+  p2p-c: "&#9660; 4.8"
+  tpd: 35
+  tpd-c: "&#9650; 6"
+  mc: 3.4
+  ttx: "23.9K"
+  btc: 0.004667
+  date: "21 Mar 2022 MON"
+  published: "2022-03-21"
+
+- hr: 3.07
+  hr-c: "&#9650; 8"
+  p2p: 4.2
+  p2p-c: "&#9660; 8.7"
+  tpd: 33
+  tpd-c: "&#9660; 5.7"
+  mc: 3.5
+  ttx: "21.0K"
+  btc: 0.004757
+  date: "20 Mar 2022 SUN"
+  published: "2022-03-20"
+
+- hr: 2.84
+  hr-c: "&#9650; 2.9"
+  p2p: 4.6
+  p2p-c: "&#9660; 9.8"
+  tpd: 35
+  tpd-c: "&#9660; 5"
+  mc: 3.6
+  ttx: "21.0K"
+  btc: 0.004668
+  date: "19 Mar 2022 SAT"
+  published: "2022-03-19"
+
+- hr: 2.76
+  hr-c: "&#9650; 5.8"
+  p2p: 5.1
+  p2p-c: "&#9650; 6.2"
+  tpd: 37
+  tpd-c: "&#9650; 5"
+  mc: 3.5
+  ttx: "22.3K"
+  btc: 0.004652
+  date: "18 Mar 2022 FRI"
+  published: "2022-03-18"
+
+- hr: 2.93
+  hr-c: "0"
+  p2p: 4.8
+  p2p-c: "&#9650; 9"
+  tpd: 35
+  tpd-c: "&#9650; 6"
+  mc: 3.4
+  ttx: "22.2K"
+  btc: 0.004615
+  date: "17 Mar 2022 THU"
+  published: "2022-03-17"
+
+- hr: 2.93
+  hr-c: "&#9650; 5.4"
+  p2p: 4.4
+  p2p-c: "0"
+  tpd: 33
+  tpd-c: "&#9650; 5.7"
+  mc: 3.38
+  ttx: "24.3K"
+  btc: 0.004577
+  date: "16 Mar 2022 WED"
+  published: "2022-03-16"
+
+- hr: 2.78
+  hr-c: "&#9650; 9.7"
+  p2p: 4.4
+  p2p-c: "&#9650; 10"
+  tpd: 35
+  tpd-c: "&#9650; 6"
+  mc: 3.33
+  ttx: "24.7K"
+  btc: 0.004647
+  date: "15 Mar 2022 TUE"
+  published: "2022-03-15"
+
+- hr: 3.08
+  hr-c: "&#9650; 6"
+  p2p: 4.0
+  p2p-c: "&#9660; 13"
+  tpd: 33
+  tpd-c: "&#9660; 2.6"
+  mc: 3.35
+  ttx: "22.3K"
+  btc: 0.004675
+  date: "14 Mar 2022 MON"
+  published: "2022-03-14"
+
+- hr: 2.90
+  hr-c: "&#9650; 1"
+  p2p: 4.6
+  p2p-c: "&#9660; 8"
+  tpd: 33.9
+  tpd-c: "&#9650; 0.8"
+  mc: 3.29
+  ttx: "20.3K"
+  btc: 0.004694
+  date: "13 Mar 2022 SUN"
+  published: "2022-03-13"
+
+- hr: 2.87
+  hr-c: "&#9650; 0.7"
+  p2p: 5
+  p2p-c: "&#9650; 4"
+  tpd: 33.6
+  tpd-c: "&#9660; 4"
+  mc: 3.34
+  ttx: "20.2K"
+  btc: 0.004727
+  date: "12 Mar 2022 SAT"
+  published: "2022-03-12"
+
+- hr: 2.85
+  hr-c: "&#9650; 3"
+  p2p: 4.8
+  p2p-c: "&#9660; 13"
+  tpd: 35
+  tpd-c: "0"
+  mc: 3.10
+  ttx: "20.5K"
+  btc: 0.004456
+  date: "11 Mar 2022 FRI"
+  published: "2022-03-11"
+
+- hr: 2.75
+  hr-c: "&#9660; 11"
+  p2p: 5.5
+  p2p-c: "&#9650; 19"
+  tpd: 35
+  tpd-c: "&#9650; 6"
+  mc: 3.12
+  ttx: "21.8K"
+  btc: 0.004378
+  date: "10 Mar 2022 THU"
+  published: "2022-03-10"
+
+- hr: 3.08
+  hr-c: "&#9650; 12"
+  p2p: 4.6
+  p2p-c: "0"
+  tpd: 33
+  tpd-c: "&#9660; 10"
+  mc: 3.38
+  ttx: "26.5K"
+  btc: 0.004475
+  date: "09 Mar 2022 WED"
+  published: "2022-03-09"
+  
+- hr: 2.74
+  hr-c: "??"
+  p2p: 4.6
+  p2p-c: "??"
+  tpd: 37
+  tpd-c: "??"
+  mc: 3.51
+  ttx: "22.5K"
+  btc: 0.005259
+  date: "08 Mar 2022 TUE"
+  published: "2022-03-08"

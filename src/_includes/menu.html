@@ -1,0 +1,54 @@
+<input type="checkbox" id="menu-toggle" hidden/>
+
+<ul id="menu" hidden>
+
+	<ul class="menu-pages">
+		<li>Pages</li>
+		<li><a href="/about">About</a></li>	
+		<li><a href="/archive">Archive</a></li>
+		<li><a href="/changelog">Changelog</a></li>
+		<li><a href="/resources">Resources
+		{% assign time_now = site.time | date: "%-d %b %Y" %}
+		{% assign resources_modified = site.data.resources.modified %}
+		{% if time_now == resources_modified %}
+		<span class="new glowing">&#9679;</span>
+		{% endif %}
+		</a> 
+		</li>
+		<li><a href="/rss">RSS</a></li>
+		<li><a href="/stats">XMR Stats</a></li>
+	</ul>
+	
+  <ul class="menu-tags">
+		<li>Featured</li>
+		<li><a href="/tag/bounties">Bounties</a></li>
+		<li><a href="/tag/calendar">Calendar</a> | <a href="/tag/logs">Logs</a></li>
+		<li><a href="/tag/CCS">CCS</a></li>
+		<li><a href="/tag/community">Community Messages</a></li>
+		<li><a href="/tag/guides">Guides</a></li>
+		<li><a href="/tag">All Tags</a></li>
+  </ul>
+  
+  <ul class="menu-periodicals">
+		<li>Periodicals</li>
+		<li>-Weekly</li>
+		<li><a href="/tag/art">Artistic Saturday (SAT)</a></li>
+		<li><a href="/tag/dev">Dev Activity (SUN)</a></li>
+		<li><a href="/tag/analysis">Technical Analysis (MON)</a></li>
+		<li>-Monthly</li>
+		<li><a href="/tag/blitz">Blitz (1st)</a></li>
+  </ul>
+  
+  <ul class="menu-stats">
+		<li>Stats</li>
+		{% assign total_stories = site.posts | where: "layout", "post" %}
+		{% assign total_messages = site.posts | where: "layout", "message" %}
+		{% assign total_news = total_stories.size | plus: total_messages.size %}
+		<li>News Daily: <strong>~4.6</strong></li>
+		<li>News Total: <strong>{{ total_news }}</strong></li>
+		<li>Readers Qtly.: <strong>~5250</strong></li>
+		<li><br></li>
+		<li><a href="/monero-observer-self-hosted-git-server">Git</a> | <a href="/about#licenses">Licenses</a></li>
+  </ul> 
+  
+</ul>

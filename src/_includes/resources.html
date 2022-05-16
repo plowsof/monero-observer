@@ -1,0 +1,88 @@
+<br>
+<ul class="alpha">
+<li><a href="#A">A</a></li>
+<li><a href="#B">B</a></li>
+<li><a href="#C">C</a></li>
+<li><a href="#D">D</a></li>
+<li><a href="#E">E</a></li>
+<li><a href="#F">F</a></li>
+<li><a href="#G">G</a></li>
+<li><a href="#H">H</a></li>
+<li><a href="#I">I</a></li>
+<li><a href="#J">J</a></li>
+<li><a href="#K">K</a></li>
+<li><a href="#L">L</a></li>
+<li><a href="#M">M</a></li>
+<li><a href="#N">N</a></li>
+<li><a href="#O">O</a></li>
+<li><a href="#P">P</a></li>
+<li><a href="#Q">Q</a></li>
+<li><a href="#R">R</a></li>
+<li><a href="#S">S</a></li>
+<li><a href="#T">T</a></li>
+<li><a href="#U">U</a></li>
+<li><a href="#V">V</a></li>
+<li><a href="#W">W</a></li>
+<li><a href="#X">X</a></li>
+<li><a href="#Y">Y</a></li>
+<li><a href="#Z">Z</a></li>
+</ul>
+
+{% assign list = site.data.resources.toc2 | sort: 'letter' %}
+
+<section id="resources">
+<div>
+{% if list[0] %}
+  {% for item in list limit: 13 %}
+    <h3 class="letter" id="{{ item.letter }}">{{ item.letter }}<sup><a href="#">^</a></sup></h3>
+      {% if item.subfolderitems[0] %}
+        <ul>
+        	{% assign sublist = item.subfolderitems | sort: 'page' %}
+          {% for entry in sublist %}
+              <li><strong>{{ entry.page }}</strong>
+                {% if entry.subsubfolderitems[0] %}
+                  <ul>
+                  {% assign sublistitems = entry.subsubfolderitems | sort: 'name' %}
+                  {% for subentry in sublistitems %}
+                      <li>{{ subentry.name }}
+                      {% if subentry.email %}<a href="mailto:{{ subentry.email }}" title="email">[@]</a>{% endif %}{% if subentry.www %}<a href="{{ subentry.www }}" title="website" target="_blank" rel="nofollow">[www]</a>{% endif %}{% if subentry.onion %}<a href="{{ subentry.onion }}" title="onion" target="_blank" rel="nofollow">[o]</a>{% endif %}{% if subentry.code %}<a href="{{ subentry.code }}" title="git" target="_blank" rel="nofollow">[<>]</a>{% endif %}{% if subentry.matrix %}<a href="{{ subentry.matrix }}" title="matrix" target="_blank" rel="nofollow">[m]</a>{% endif %}{% if subentry.xmpp %}<a href="xmpp:{{ subentry.xmpp }}" title="XMPP">[x]</a>{% endif %}
+                      </li>
+                  {% endfor %}
+                  </ul>
+                {% endif %}
+              </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endfor %}
+{% endif %}
+</div>
+<div>
+{% if list[0] %}
+  {% for item in list limit: 13 offset: 13 %}
+    <h3 class="letter" id="{{ item.letter }}">{{ item.letter }}<sup><a href="#">^</a></sup></h3>
+      {% if item.subfolderitems[0] %}
+        <ul>
+        	{% assign sublist = item.subfolderitems | sort: 'page' %}
+          {% for entry in sublist %}
+              <li><strong>{{ entry.page }}</strong>
+                {% if entry.subsubfolderitems[0] %}
+                  <ul>
+                  {% assign sublistitems = entry.subsubfolderitems | sort: 'name' %}
+                  {% for subentry in sublistitems %}
+                      <li>{{ subentry.name }}
+                      {% if subentry.email %}<a href="mailto:{{ subentry.email }}" title="email">[@]</a>{% endif %}{% if subentry.www %}<a href="{{ subentry.www }}" title="website" target="_blank" rel="nofollow">[www]</a>{% if subentry.onion %}<a href="{{ subentry.onion }}" title="onion" target="_blank" rel="nofollow">[o]</a>{% endif %}{% endif %}{% if subentry.code %}<a href="{{ subentry.code }}" title="git" target="_blank" rel="nofollow">[<>]</a>{% endif %}{% if subentry.matrix %}<a href="{{ subentry.matrix }}" title="matrix" target="_blank" rel="nofollow">[m]</a>{% endif %}{% if subentry.xmpp %}<a href="xmpp:{{ subentry.xmpp }}" title="XMPP">[x]</a>{% endif %}
+                      </li>
+                  {% endfor %}
+                  </ul>
+                {% endif %}
+              </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endfor %}
+{% endif %}
+</div>
+
+</section>
+

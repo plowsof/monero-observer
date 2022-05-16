@@ -1,0 +1,66 @@
+---
+layout: page
+---
+
+<h1><a href="/tag">[Tags]</a> > [{{ page.tag }}]</h1>
+{% if page.tag == "blitz" %}
+{% if page.description %}
+<p>{{ page.description }}</p>
+{% endif %}
+<div class="flex-container">
+{% for post in site.tags[page.tag] limit: 20 %}
+<div class="story">
+<a href="{{ post.url }}">
+<img src="/assets/img/blitz/{{ post.image }}" alt="monero observer blitz"/>
+</a>
+</div>
+{% endfor %}
+</div>
+{% else %}
+<ul>
+{% if page.description %}
+<p>{{ page.description }}</p>
+{% endif %}
+{% for post in site.tags[page.tag] %}
+{% if post.tags contains "pinned" %}
+<li class="story pinned">
+<h2>
+{% unless page.url == "/tag/pinned/" %}
+<a href="/tag/pinned"><sup>[pinned]</sup></a>
+{% endunless %}
+<span>
+{% if post.last_modified_at %}
+{{ post.date | date: "%-d %b %Y" }} | Updated {{ post.last_modified_at | date: "%-d %b %Y" }}
+{% else %}
+{{ post.date | date: "%-d %b %Y" }}
+{% endif %}
+</span>
+<a href="{{ post.url }}">{{ post.title }}</a>
+</h2>
+</li>
+{% endif  %}
+{% endfor %}
+{% for post in site.tags[page.tag] limit: 20 %}
+{% unless post.tags contains "pinned" %}
+<li class="story">
+<h2>
+<span>
+{% if post.last_modified_at %}
+{{ post.date | date: "%-d %b %Y" }} | Updated {{ post.last_modified_at | date: "%-d %b %Y" }}
+{% else %}
+{{ post.date | date: "%-d %b %Y" }}
+{% endif %}
+</span>
+<a href="{{ post.url }}">{{ post.title }}</a>
+</h2>
+</li>
+{% endunless %}
+{% endfor %}
+</ul>
+{% endif %}
+{% if page.tag == "pinned" %}
+<p><em>Displaying all pinned entries in all tags.</em></p>
+{% else %}
+<p><em>Only displaying the most recent entries.</em></p>
+<p><em>Visit the <a href="/archive#{{ page.tag }}">Archive</a> to view all entries in  [{{ page.tag }}].</em></p>
+{% endif %}

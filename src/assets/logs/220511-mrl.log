@@ -1,0 +1,105 @@
+17:00:26 <UkoeHB> meeting time: https://github.com/monero-project/meta/issues/702
+17:00:26 <UkoeHB> 1. greetings
+17:00:26 <UkoeHB> hello
+17:00:49 <ooo123ooo123[m]> hello
+17:01:09 <rbrunner> Hi
+17:01:10 <Rucknium[m]> Hi
+17:01:38 <xmr-ack[m]> Hi
+17:02:35 <jberman[m]> hello
+17:02:46 <UkoeHB> 2. updates, what is everyone working on?
+17:02:58 <mj-xmr[m]> Hi
+17:04:11 <Rucknium[m]> Been doing a lot of work on BCH projects, including prototyping various data structures.
+17:05:19 <xmr-ack[m]> Me: I’ve been feature engineering for my magic grant, I have a neural network built that is achieving roughly the same accuracies as the other models.
+17:06:25 <mj-xmr[m]> I have basically done everything else, that was blocking me from continuing the Decoy reimplementation, including the time consuming monthly report.
+17:06:26 <mj-xmr[m]> After this, I made the next step and confirmed (so far visually), that my Python interpretation of the gamma distribution's parameters is the same as the original Monero's. See here:
+17:06:26 <mj-xmr[m]> https://github.com/mj-xmr/monero-mrl-mj/tree/decoy/decoy#comparison-of-moneros-and-python-gamma-distribution
+17:06:46 * mj-xmr[m] uploaded an image: (32KiB) < https://libera.ems.host/_matrix/media/r0/download/matrix.org/dBJaSeDvKHJGOFKwaYfzyeBk/image.png >
+17:07:54 <mj-xmr[m]> Ruck: if nothing stops me, I should have it done until the end of the next week.
+17:08:32 <UkoeHB> me: Continuing work on Seraphis (will write unit tests for my input selection solver today, next step is enote scanning workflows). Also pushing multisig PR 8149 forward (finally done with all the rebases). The existing multisig implementation is completely busted, so it's important to fix as many bugs as possible with the next HF. However, as ooo123ooo123[m] rightly points out, we need more reviews for increased 
+17:08:32 <UkoeHB> confidence that all the bugs/protocol inadequacies have been resolved (if there are any takers, please help with that, the protocol is too large for any one person to identify every possible weakness).
+17:08:50 <Rucknium[m]> Looks great! Just a typo: Those are the PDFs rather than the CDFs
+17:09:47 <jberman[m]> re-reviewed 8076 (rbrunner's PR to reduce trips to the daemon on wallet refresh), dug deeper into the Dandelion++ impl while doing so, and have been working through patching some daemon connectivity/reliability issues I noticed in the process (txs get stuck after failing to relay on 1st try, and connections are dropping leading to sporadic failed submits/warnings in the logs). Getting to the bottom of these specific connectivity
+17:09:47 <jberman[m]> issues I believe will give me momentum into reviewing perfect-daemon's 7760 that deals with similar issues
+17:11:25 <Rucknium[m]> jberman: Great. Thank you. I have heard from many people that `monerod` has reliability issues.
+17:11:56 <rbrunner> Yeah, 7760 is waiting for a long time already, would be sad to waste it because nobody reviews
+17:14:17 <UkoeHB> 3. discussion, any questions/comments/things to talk about?
+17:14:23 <jberman[m]> Tbh I'm hoping some of 7760 can be knocked out with smaller bite-sized patches like vtnerd pointed out in his review of that PR; that PR is fairly large and difficult to reason through
+17:16:20 <Rucknium[m]> Would anyone mind if I opened a PR for the research-lab GitHub repo to update the README a little? For example, addition MoneroResearch.info , link to list of open research questions, explanation of where to find meeting announcements, etc.
+17:16:42 <Rucknium[m]> Also, there is a PR waiting to be merged to add previous meeting logs.
+17:17:00 <UkoeHB> go for it
+17:17:19 <selsta> jberman[m]: the problem is it fixes a number of interconnected bugs, so one large rewrite was the easiest way to go for it
+17:19:30 <w[m]> Is 7999 still being looked at for the fork? https://github.com/monero-project/monero/pull/7999
+17:19:59 <selsta> for this fork? no
+17:20:03 <ooo123ooo123[m]> Bulletproofs++ will be included into this fork
+17:20:29 <UkoeHB> BP++?
+17:20:56 <hyc> only 1 +, not 2
+17:21:24 <selsta> there is also ++ now but that isn't implemented yet
+17:21:28 <selsta> at least there is a paper for it
+17:21:50 <hyc> https://eprint.iacr.org/2022/510
+17:22:08 <UkoeHB> the BP++ paper said it was slower than BP+ (in their tests), so it's usefulness remains to be seen
+17:23:18 <UkoeHB> maybe batching can amortize those costs
+17:24:43 <mj-xmr[m]> <Rucknium[m]> "Looks great! Just a typo..." <- Fixed. Thanks.
+17:25:00 <Rucknium[m]> Do people have thoughts about gingeropolous  's CCS proposal for more storage on the research computing server? https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/317
+17:25:51 <Rucknium[m]> In the short term, the storage increase is important for analyzing user behavior on other blockchains.
+17:28:47 <ooo123ooo123[m]> Rucknium[m]: Would it be useful for BCH work too ?
+17:30:41 <Rucknium[m]> We are not using it for BCH-focused projects. However, as discussed in a recent meeting, I will be analyzing some key medium-of-exchange cryptocurrencies, including BTC, BCH, LTC, DOGE, and maybe DASH.
+17:32:30 <merope> Not much to say I guess - improving the tools for the job is always a plus imo
+17:33:05 <ooo123ooo123[m]> <UkoeHB> "the BP++ paper said it was..." <- "This code is not competitive with implementations in C or Rust or that use highly performant libraries for the elliptic curve operations." That's reference implementation without any optimizations
+17:33:21 <UkoeHB> yes, hence 'remains to be seen'
+17:33:29 <mj-xmr[m]> <Rucknium[m]> "In the short term, the storage..." <- Exactly this is what ArticMine suggested me to do with my future fee vs blocksize analysis. This will help proving Monero's superiority.
+17:33:49 <moneromooo> EC op count should give a fairly good indication.
+17:33:54 <mj-xmr[m]> Since Monero will adapt to the situation better. We know it.
+17:34:27 <mj-xmr[m]> So yeah. I'm for the gingeropolous 's CCS Proposal.
+17:36:34 <UkoeHB> BP++ is also a very new paper, so it would be good to let it marinate (and maybe do some poc and perf testing if we can find someone able and motivated to implement it).
+17:40:18 <UkoeHB> Anything else anyone wants to say? Otherwise we can close the meeting early
+17:41:32 <Rucknium[m]> On mining pool concentration, I want to point out that my suggestion to try to have minexmr.com implement a dynamic pool operator fee got lots of upvotes on Reddit. Which doesn't mean too much, but suggests that the community would be OK with the idea: https://www.reddit.com/r/Monero/comments/uk8pab/comment/i7o6bt6/
+17:41:43 <Rucknium[m]> Of course the key hurdle is whether minexmr.com itself is OK with the idea 
+17:42:08 <moneromooo> Good luck. I wrote a patch to do that automatically years ago, nobody cared.
+17:42:13 <hyc> and how many of the upvotes are from minexmr miners?
+17:42:44 <ooo123ooo123[m]> <UkoeHB> "BP++ is also a very new paper..." <- The hardest part is to check it's security. Implementation is easy
+17:43:09 <Rucknium[m]> We will likely continue to deal with this problem. According to my very preliminary model, minexmr's share of blocks found increases when the fiat/XMR exchange rate declines. It may be that miners who use minexmr are less sensitive to depreciation of XMR.
+17:43:17 <merope> Such a dynamic pool fee would work if miners were picking pools "dynamically", but I think it would just be "free money" for the pool operator as-is
+17:44:02 <hyc> yeah if most miners are "set it and forget it"
+17:44:13 <UkoeHB> ooo123ooo123[m]: well if you want to implement a proof-of-concept, I can spin up some perf tests
+17:44:31 <merope> We know that there is a large botnet concentration on Minexmr, so they are definitely "less sensitive to depreciation"
+17:44:47 <selsta> yes, minexmr is probably the default pool in many botnet guides
+17:45:47 <ooo123ooo123[m]> merope: How did you check that ? Is it public knowledge ?
+17:45:55 <merope> And even if mining configuration were not "set it and forget it", we still have the issue of withdrawal minimums. Many small miners start mining on Minexmr, get told to switch, but stick around because they can't withdraw their payouts yet
+17:46:40 <merope> People are very attached to those 1-2 dollars worth of xmr they took weeks to mine
+17:46:54 <ooo123ooo123[m]> <Rucknium[m]> "On mining pool concentration..." <- Pool will not commit suicide this way, so it will not help at all. And if pool decides to commit suicide then another pool will pop up and replace it
+17:49:05 <Rucknium[m]> Frankly if pools will not change behavior to reducing concentration, then a protocol change may be in order, in line with tevador's MRL issue #98. I think we have been hoping that p2pool changes things, especially now that it is integrated with the GUI wallet. But if things don't change, what do we do?
+17:49:48 <gingeropolous> tevadors boolberry-like thing might work
+17:50:12 <Rucknium[m]> I don't think that others pools can just grab market share so easily. minexmr's hashrate share is the product of years of inertia.
+17:50:13 <gingeropolous> though if the majority of that hr is botnets, they'll just hide behind a proxy
+17:50:49 <gingeropolous> but i guess at some level it will still add costs to the pool, which will drive the fee up, which would hopefully get ppl to migrate to different pools
+17:52:43 <moneromooo> One thing that could help is (1) xmrig auto uses the pool with lowest hash rate in a set of pools it knows about and (2) a common api for pools to "exchange" pending balances, similar to how banks do settlements.
+17:52:59 <moneromooo> It'd rely on pools being onest, but the current system already does.
+17:53:07 <moneromooo> Also relies on someone to do the code...
+17:53:28 <moneromooo> (this is to counter the "people are very attached..." point)
+17:53:59 <moneromooo> Might rely too much on cooperation though.
+17:54:10 <gingeropolous> yeah.
+17:54:30 <moneromooo> Though if you don't cooperate, you get bumped off xmrig's list ? Might be enough of an incentive.
+17:54:44 <gingeropolous> right now there's relatively little cost of being a big pool
+17:54:53 <moneromooo> Does xmrig have a builtin list atm ? If not, it'd also add a centralization aspect.
+17:55:26 <sech1> there's no built in list in xmrig
+17:55:28 <moneromooo> Actually, nvm, this adds nothig on top of p2pool does it. Ignore what I said.
+17:55:30 <merope> It would rely on trusting both pools - but given that you were using one pool and are now switching to the other, it implies that you are trusting them already to hold your balance
+17:55:46 <sech1> but there is a list at https://xmrig.com/wizard#pools
+17:55:48 <merope> The main issue I see with the balance transfer is the setup and the tx fees every time someone wants to switch
+17:56:07 <gingeropolous> this seems very top down
+17:56:38 <merope> sech1 perhaps add a warning next to minexmr's name? Or remove minexmr from that list?
+17:56:55 <merope> That way, if somebody really wants to mine there, they'll have to add it manually
+17:56:59 <sech1> that would be censorship
+17:57:03 <merope> Might be enough to deter a clueless newbie
+17:57:14 <sech1> clueless newbie don't use this page
+17:57:29 <sech1> they usually watch some youtube video or google "how to mine monero"
+17:57:43 <merope> I've pointed countless newbies to the wizard (don't know how many have actually used it though)
+17:57:45 <sech1> and find a guide that tells them to use minexmr
+17:57:49 <gingeropolous> and most noobs (i was once a noob) want to see a payout to see that its real
+17:57:59 <gingeropolous> so they go for the one that'll give them a payout the soonest
+17:58:29 <merope> And it would not be censorship - they still *can* mine there, they'll just have to add it as a "custom pool" instead of going off the preconfigured list
+17:58:33 <gingeropolous> if the noob sticks around they may change pools. but i imagine it would mainly be for a lower fee
+17:59:30 <merope> The earliest payout is from pools with the lowest withdrawal minimum
+17:59:40 <UkoeHB> we are at the end of the hour, thanks for attending everyone
+
+[post-meeting discussions: https://libera.monerologs.net/monero-research-lab/20220511#c93644]

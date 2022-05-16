@@ -1,0 +1,172 @@
+18:00:29 <plowsof[m]> Meeting time!
+18:00:29 <plowsof[m]> Introduction / Greetings
+18:00:29 <plowsof[m]> Hello everyone, it's been a while. During this hour we'll discuss recent events, CCS ideas and those that are in progress. Touch on what some of the other workgroups have been doing and end on some open ideas.
+18:01:04 <plowsof[m]> Hello monerobull 
+18:01:12 <monerobull[m]> is this the meeting supposed to clean up the ccs proposals?
+18:01:13 <monerobull[m]> plowsof[m]: hi
+18:01:34 <cryptogrampy[m]> hi
+18:01:40 <plowsof[m]> not clean but at least share our ideas / thoughts on them :)
+18:02:11 <merope> Ahoy!
+18:02:46 <plowsof[m]> Right, lets jump in
+18:02:49 <Rucknium[m]> Hi
+18:02:50 <plowsof[m]> Community highlights
+18:03:05 <plowsof[m]> a. Seth's Hardfork Checklist
+18:03:11 <plowsof[m]> https://github.com/monero-project/meta/issues/690
+18:03:33 <plowsof[m]> @sethforprivacy has created a hardfork checklist so we can keep track of tasks yet to be completed. It's coming along nicely!
+18:03:45 <monerobull[m]> i wrote kraken support and they said their developers will keep things uptodate
+18:04:30 <plowsof[m]> We've had some malicious nodes causing trouble again with high tx fees https://www.reddit.com/r/Monero/comments/udpv7q/warning_1973_xmr_transaction_fee_malicious_remote/
+18:04:51 <plowsof[m]> A warning in the Monero GUI wallet has been added to warn of high TX fees. A list of trusted / 'health checked' nodes has been suggested as long term fix for simple node users. 
+18:05:02 <plowsof[m]> info here : https://github.com/monero-project/monero-gui/pull/3897
+18:05:43 <cryptogrampy[m]> And obviously the best fix is to use your own nodes :) 
+18:05:53 <monerobull[m]> very nice. ill take 1% credit for promoting the use of a static high fee warning 
+18:06:15 <plowsof[m]> Indeed, there are many attack vectors / annoying things they can do
+18:07:10 <plowsof[m]> I think a trusted list for simple node users is a good solution (instead of them choosing from a pool of nodes with malicious actors in) 
+18:07:27 <w[m]> I was going to suggest the same ^
+18:07:44 <monerobull[m]> just make sure to implement a fallback to random nodes.
+18:08:00 <w[m]> I did some digging and found out that moneujo uses static nodes + 1 node that selects random
+18:08:50 <w[m]> monerobull[m]: I think a list of 20-100 community nodes ia sufficient.
+18:08:50 <w[m]> IMO shouldn't fall back to random. Most malicious actors try to get on the auto-lists
+18:08:57 <merope> plowsof[m]: I originally suggested checking against the main seed nodes of the network: they're already "trusted" for bootstrapping the network, so we might as well take advantage of them
+18:09:15 <plowsof[m]> Interesting, Feather wallet also has some list of nodes it performs health checks on 
+18:09:15 <cryptogrampy[m]> Hmmm I don't think it's a good idea to increase reliance on the seeds
+18:09:22 <merope> merope: Though the list should also include other nodes too - don't want to put all your eggs in a single basket
+18:10:17 <plowsof[m]> Have we all updates our wallets/binaries? 👀https://www.getmonero.org/2022/04/29/monero-GUI-0.17.3.2-released.html
+18:10:34 <merope> I did just this morning!
+18:11:02 <plowsof[m]> Woohoo! the DNS records have been / are going to be? updates so the message to update should have appeared? can anyone confirm?
+18:12:27 <w[m]> <monerobull[m]> "i wrote kraken support and..." <- Seth For Privacy: 
+18:12:27 <w[m]> Herominers is on board as well
+18:12:29 <monerobull[m]> i updated and now i have to put "monero" instead of "gui" into the searchbar to find it. (since i installed git)
+18:12:37 <w[m]> * Seth For Privacy:  is on board as well
+18:13:03 <monerobull[m]> someone with an @monero.social should still write them
+18:13:25 <w[m]> Seth For Privacy: 
+18:13:25 <w[m]> Herominers is on board as well
+18:13:38 <plowsof[m]> Just plugging our news outlets: https://www.monero.observer/ https://revuo-xmr.com/ https://www.themoneromoon.com/
+18:14:13 <plowsof[m]> shall we jump into discussing CCS ideas?
+18:14:53 <plowsof[m]> I would like to start in reverse order
+18:14:56 <plowsof[m]> https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/282
+18:15:07 <monerobull[m]> heh
+18:15:22 <monerobull[m]> you might have heard of the "drama"
+18:15:32 <plowsof[m]> Comments / discussion can be seen in the repo
+18:16:37 <plowsof[m]> there was an issue of proposor contacting voter via PM - i have reached out to both parties to resolve the issue, and i think both do not wish to take it further? But we should stress that voters should not be contacted privately , all discussion should be in the open. can we agree? 👀
+18:17:34 <monerobull[m]> i just wanted to clarify that i dont feel like im in the wrong for posting those chatlogs
+18:17:45 <merope> plowsof[m]: I think it's a nice principle to have - but hardly enforceable in the real world, imo...
+18:17:57 <monerobull[m]> monerobull[m]: especially since they told me i could do it
+18:18:37 <plowsof[m]> Does anyone have any further input on this particular CCS ? or can we leave at 'as is' using the comments in the repo there?
+18:19:01 <w[m]> Not to enforce, but just courtesy.
+18:19:01 <w[m]> No coc here :)
+18:19:01 <w[m]> I think sharing e2e encrypted chats is .. a bad look.
+18:19:01 <w[m]> Take the chat public but dont post the pm unless its harassment..
+18:19:06 <monerobull[m]> im still for closing it. no point to have it clogging up the ideas anymore
+18:19:34 <monerobull[m]> > <@w:monero.social> Not to enforce, but just courtesy.... (full message at https://libera.ems.host/_matrix/media/r0/download/libera.chat/b3d44fe6d74c0e26c1eeba5e168083783b495e9c)
+18:20:02 <monerobull[m]> "you dont understand that  giving a downvote to someones proposal publicly  is extremely rude?" lmao
+18:21:16 <w[m]> For the proposal.
+18:21:16 <w[m]> I, like others, am confused about how that would work.
+18:21:16 <w[m]> Im all for afganiatan downloading cake wallet an using it, but not sure how the CCS helps an entire country 
+18:21:18 <cryptogrampy[m]> It seems pretty clear that there isn't community consensus on it.  There were a few decent suggestions in the CCS discussion, and I think it would be good for Spirobel to reintroduce it in a more palatable way in the future.
+18:22:12 <plowsof[m]> Right ok, lets move on:
+18:22:12 <plowsof[m]> https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/296
+18:22:12 <plowsof[m]> We currently have an issue with translations, our coordinator is awol and we dont have much/many reviewers. this is quite a problem at the moment. 
+18:22:30 <plowsof[m]> so they seem to stagnate / people not willing to review .. it is an ongoing problem 
+18:23:33 <monerobull[m]> i wanted a mod account restricted to german to merge translations funded by the ccs after reviewing them. plowsof wasnt allowed to give that to me and i feel like its essentially making translations we already funded entirely worthless
+18:24:16 <plowsof[m]> It is indeed an ongoing problem, glad we have shed some light on it.
+18:24:17 <monerobull[m]> i would do that for free, i wont put "upvotes" on translations for them to never get merged
+18:24:41 <plowsof[m]> Moving on - Patronero - Open Source project for donating by mining
+18:24:47 <plowsof[m]> https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/310
+18:25:07 <monerobull[m]> it sounds cook but realistically, who would ever download a miner to support someone
+18:25:28 <monerobull[m]> s/cook/cool/
+18:25:47 <monerobull[m]> thats going to end up with less users than the bisq zcash trade-pair between today and january 2021
+18:27:00 <merope> plowsof[m]: I think if we can't get a hold of the original creator of that proposal, we should redirect the funds to a new contributor willing to step up. I do realize this might create a tricky precedent in the CCS inner workings though (unless it already exists)?
+18:27:04 <merope> * already exists?)
+18:27:20 <monerobull[m]> merope: nope he already translated everything
+18:27:30 <cryptogrampy[m]> i think a public api that uses an agreed upon shared database (git repo?) of public addresses people would like to receive donations at would be much more useful than a one off mining thing.  
+18:27:31 <monerobull[m]> not his fault it doesnt get approved
+18:28:05 <monerobull[m]> aka close patronero
+18:28:32 <w[m]> Monerobull THE HAMMER
+18:28:47 <plowsof[m]> Lets talk about https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/311 
+18:29:08 <merope> plowsof slow down please 😅
+18:29:08 <monerobull[m]> i dont know enough about that one to call anything
+18:29:20 <plowsof[m]> Check the comments. This proposer is unknown, but returned with a demo / proof of concept 
+18:29:27 <merope> monerobull[m]: I think this existed already, at some point in the past. The only problem is the extremely low profitability of mining, so unless the donor has a ton of hashrate, it won't be very useful
+18:30:15 <monerobull[m]> plowsof[m]: oh that was the guy who put some shit into the site to prohibit people looking at the pages source code lmao
+18:30:23 <Rucknium[m]> Right. I think that Patronero may cost more in CCS funds than it raises.
+18:31:05 <monerobull[m]> just to have it in writing : consensus has been reached to close patronero
+18:31:41 <merope> Oh wow, I just noticed that the patronero project aims to do a whole desktop app just for setting up all the software automatically
+18:32:00 <plowsof[m]> to be fair, the proposer might not have been aware of this meeting* (perhaps to defend his case)
+18:32:16 <merope> Which might be nice as a project of its own, but the surrounding context is unnecessary
+18:32:51 <merope> Also, not sure why they'd need two different apps, one for donors and one for donees... since they basically do the same things
+18:33:16 <merope> Definitely a no from me on Patronero as-is
+18:33:51 <plowsof[m]> monerobull[m]: The funds asked for are quite high also, and CCS rules state that you can't have closed sources at any stage 
+18:34:27 <monerobull[m]> yeah just put a monero address if you take donations, mining for donating is not really needed
+18:34:42 <w[m]> And say they are covering the server costs..
+18:34:42 <w[m]> Sounds like they plan to monetize the one of the versions, or remove features.
+18:34:42 <w[m]> Else, why 2 versions
+18:35:17 <cryptogrampy[m]> I think the business kit idea seems very cool, personally.  
+18:36:09 <plowsof[m]> btw : a demo of the ' Multi scene monero solutions' can be seen here https://monero-shop-demo.yy.ee/
+18:37:00 <cryptogrampy[m]> It's an all in one docker deployable web shop and he's going to give a vending machine example 
+18:37:26 <cryptogrampy[m]> i guess the alternative we have today is wordpress/woocommerce
+18:37:33 <cryptogrampy[m]> and maybe btcpayserver
+18:37:40 <cryptogrampy[m]> for all in one self-hostable stores
+18:37:54 <monerobull[m]> but is that worth 100+ xmr
+18:38:05 <plowsof[m]> CryptoWoo also 
+18:38:09 <w[m]> And why 2 versions
+18:39:30 <plowsof[m]> right, now for https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/314
+18:40:05 <plowsof[m]> do we even have to discuss that this goes to funding immediately ? 
+18:40:40 <monerobull[m]> nope
+18:40:49 <cryptogrampy[m]> On the business kit one- it might be good for someone to ask why it should get  community funded / why people need it over existing solutions 
+18:41:05 <w[m]> And if they plan to monetize 
+18:41:12 <plowsof[m]> is midipoet here 👀
+18:41:24 <w[m]> Re serphis
+18:41:24 <w[m]> Agreed
+18:42:10 <merope> +1 yes on Seraphis PoC
+18:42:43 <plowsof[m]> and it has over 12+ updoots also pretty unanimous for koe 
+18:43:40 <plowsof[m]> midipoet doesnt seem to be here so i will skip over the workgroup updates for now 
+18:43:58 <plowsof[m]> but we can discuss Work in progress ccs proposals 
+18:44:02 <monerobull[m]> so. kill patronero and afgahnistan, merge seraphis wallet. further discussion on the biz kit
+18:44:48 <plowsof[m]> I believe the hardfork date being set has of been great importance to the OSPEAD proposal by Rucknium 
+18:45:02 <plowsof[m]> -of
+18:45:22 <Rucknium[m]> Biz kit should go out and get more engagement. I think it is strongly improved from its initial draft
+18:45:41 <Rucknium[m]> plowsof: Yes...let me get my Reddit comment on that
+18:45:55 <plowsof[m]> Thanks!
+18:46:25 <Rucknium[m]> https://www.reddit.com/r/Monero/comments/u5ab7x/comment/i50u63e/
+18:46:38 <plowsof[m]> Thanks 
+18:47:17 <Rucknium[m]> In short, I'll be using the hard fork (and rise of ring size from 11 to 16) to help with the statistical estimation, so the timeline is now more clear
+18:47:17 <plowsof[m]> i will share what ive been up to this past week also reg. work in progress list
+18:47:48 <plowsof[m]> i've been trying to re-unite funds from the CCS to their rightful owners (sorry for the spam luigi), and trying to see if any of our devs have issues. 
+18:47:52 <plowsof[m]> The monero-bash contributor was asking for 'all' of his funds to be donated to the General Fund because of an issue with the last milestone. After a push in the right direction, They have now completed / released all milestones and paid out in full. https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/297
+18:47:52 <plowsof[m]> Release notes: https://github.com/hinto-janaiyo/monero-bash/releases/tag/v1.5
+18:48:02 <plowsof[m]> Some people had payments overdue because of a slight communication error which i discovered by poking people, also resolved.
+18:48:23 <plowsof[m]> I noticed the 'Monero casino' proposal (for 1 xmr) was looking lost in the comments, not able to contact anyone on IRC/matrix , this will also be resolved shortly https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/304
+18:49:14 <midipoet> plowsof[m]: sorry, I am here 
+18:49:26 <plowsof[m]> hello there
+18:49:37 <plowsof[m]> https://ccs.getmonero.org/proposals/midipoet-Oslo_Freedom_Forum_CCS_proposal.html
+18:49:41 <midipoet> As an update to my CCS, I have received half funds as a payout and organised flight and hotel for Oslo. 
+18:50:27 <monerobull[m]> midipoet: enjoy the vacation /s
+18:50:34 <midipoet> I do have a question for the community on what type of "educational" material to hand out over there, as I know some were hesitant about that. Previously we handed out paper wallets and also a flyer with info about Monero 
+18:51:17 <merope> plowsof[m]: Honestly I'm not really a fan of that proposal going thorugh the CCS. We already have enough people paranoid about "monero gonna get delisted any day now", and officially endorsing a for-profit gambling platform is not good optics for the project imo
+18:51:43 <merope> Not to mention the fact that - as the author temselves says - they already tried and failed once vefore
+18:52:20 <w[m]> midipoet: 5$ Donations like doug
+18:52:37 <monerobull[m]> merope: watch them run with all the "investor" money
+18:52:48 <midipoet> This was the material in 2019
+18:52:49 <midipoet> https://e1.pcloud.link/publink/show?code=kZ1cPzZ483Wnqa82AmXNNxv73AoUHvDmJSV
+18:53:22 <monerobull[m]> why bird
+18:53:47 <plowsof[m]> can you plug the place that you are going to be posting the review/blog after the event also midipoet?
+18:54:50 <plowsof[m]> i would like to drop in some open ideas now (with 5 minutes left until the hour)
+18:54:59 <plowsof[m]> a. Adding --rpc-access-control-origins=* to a public node config to help the monero-javascript ecosystem. 
+18:55:06 <plowsof[m]> https://github.com/monero-project/monero/issues/8168
+18:55:38 <midipoet> plowsof[m]: I hadn't thought of a more official outlet other than Reddit, to be honest. Along with the Exit Strategy podcast episode. Open to ideas on venues 
+18:55:42 <plowsof[m]> also 'zmq' , hopefully Seth For Privacy can look into it and add it to his vast monerod tutorial / docker infrastructure 
+18:55:57 <plowsof[m]> quote from cyrpto grampy:
+18:55:57 <plowsof[m]> Can anyone speak to adding --rpc-access-control-origins=* to a public node config? It's a more usable feature with the latest release and I'd like to see more public nodes adopt it if possible :)
+18:57:17 <plowsof[m]> Reddit/Matrix is always great, thanks
+18:58:29 <plowsof[m]> also, anyone interested in 'podcasting 2.0' using monero? agates (Alecks Gates) would like to hear from you.
+19:00:00 <merope> I'll drop one idea for a potential future CCS proposal: what about promoting Monero in the UAE? Dubai seems to be stepping up as a potential future financial center for the crypto world. Even Kraken has opened a regional office there now, and they are licensed to operate as a regulated exchange in the region. If other "crypto-hype" projects can do it, why not us too?
+19:00:18 <plowsof[m]> I would also like to state that a Dev is for life not just for release day , please reach out if you have any issues/problems <3 
+19:00:40 <w[m]> <plowsof[m]> "a. Adding --rpc-access-control-..." <- I got lost in the timeline, but vtnerd: has security concerns when it was first introduced 
+19:00:59 <merope> The potential for financial development is great - and I'm not talking about price lambos here, I'm talking about increasing the size of the Monero economy. Increase the velocity of money
+19:01:33 <w[m]> Cheap hydro too I think. I know a few eth miners out there that had never heard of monero 
+19:02:09 <plowsof[m]> The hour appears to be up, apologies for rushing some parts, its been a while, tried to get through as much as possible, thank you for attending !
+19:02:30 <w[m]> https://github.com/monero-project/monero/issues/1677#issuecomment-277488905
+19:02:30 <w[m]> https://github.com/monero-project/monero/issues/2408#issuecomment-328522228
+19:02:39 <w[m]> plowsof: 
+19:02:49 <plowsof[m]> Thanks!
+19:03:44 <plowsof[m]> I guess we can schedule another one next week same time 🤷

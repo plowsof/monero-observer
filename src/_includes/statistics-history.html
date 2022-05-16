@@ -1,0 +1,13 @@
+{% assign today_stats = site.data.statistics | sort: "published" | reverse %}
+{% for statistic in today_stats %}
+<div class="stats">
+<span id="site-date">{{ statistic.date }}</span>
+<span title="Network Hashrate">&#8226; HR: {{ statistic.hr }} GH/s ({{ statistic.hr-c }}%)</span>
+<span title="Top Pool Dominance">&#8226; TPD: {{ statistic.tpd }}% ({{ statistic.tpd-c }}%)</span>
+<span title="P2Pool Dominance">&#8226; P2P: {{ statistic.p2p }}% ({{ statistic.p2p-c }}%)</span>
+<span title="Market Cap">&#8226; MC: {{ statistic.mc }}B USD</span>
+<span title="Total Transactions">&#8226; TTX: {{ statistic.ttx }}</span>
+<span title="XMR/BTC">&#8226; {{ statistic.btc }} BTC</span>
+</div>
+{% endfor %}
+

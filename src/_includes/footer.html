@@ -1,0 +1,18 @@
+<footer>
+{% if page.url == "/" %}
+<p class="notes"><em>0 x JS, cookies, trackers, ads.</em></p>
+{% endif %}
+{% unless page.url contains "about" %}
+{% if page.url == "/resources/" %}
+<a href="/about">[About]</a>
+<a href="/rss">[RSS]</a>
+{% elsif page.url == "/rss/" %}
+<a href="/about">[About]</a>
+<a href="/resources">[Resources]</a>
+{% else %}
+<a href="/about">[About]</a>
+<a href="/resources">[Resources]</a>
+<a href="/rss">[RSS]</a>
+{% endif %}
+{% endunless %}
+</footer>

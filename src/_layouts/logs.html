@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-US">
+{% include head.html %}
+<body>
+{% include header.html %}
+<div class="content-logs">
+<section id="logs">
+
+<div id="all-logs">
+<h1>Logs 
+<sup>{% assign total_logs = site.posts | where: "tags", "logs" %}[{{ total_logs.size }}]</sup>
+</h1>
+<p>Monero Workgroup Meetings - Logs & Summaries</p>
+<br>
+<div class="wrap">
+{% assign latest_logs = site.posts | where: "tags", "logs" | sort: "meeting_date" | reverse %}
+{% for post in latest_logs limit: 16 %}
+<div class="log">
+<p>
+<span class="meeting-date">{{ post.meeting_date }}</span> 
+{{ post.meeting_name }} Meeting
+<span class="meeting-links">
+<a href="{{ post.url }}" title="Summary">[Summary]</a>
+{% if post.meeting_logs != null %}<a href="{{ post.meeting_logs }}" title="Logs" target="_blank">[Logs]</a>{% else %}<span title="Unavailable">[Logs]</span>{% endif %}
+</span>
+</p>
+</div>
+{% endfor %}
+</div>
+
+<hr>
+</div>
+
+<p><em>Only displaying the most recent entries.</em></p>
+<p><em>Visit the <a href="/archive#{{ page.tag }}">Archive</a> to view all entries in  [{{ page.tag }}].</em></p>
+
+</section>
+</div>
+{% include footer.html %}
+</body>
+</html>
